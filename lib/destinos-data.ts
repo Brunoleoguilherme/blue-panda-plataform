@@ -20,8 +20,7 @@ export const destinos: Destino[] = [
     bandeira: "🇧🇷",
     descricao:
       "A maior cidade da América Latina recebe os maiores eventos esportivos do mundo. Da NFL à Fórmula E, São Paulo é palco de experiências históricas.",
-    imagem:
-      "https://images.unsplash.com/photo-1629041282673-279ea14f0d43?q=80&w=1200",
+    imagem: "/images/destino-saopaulo.jpg",
     eventos: 4,
     destaques: ["NFL Brasil", "Fórmula E", "MotoGP", "UFC"],
     continente: "americas",
@@ -47,7 +46,7 @@ export const destinos: Destino[] = [
     descricao:
       "Hollywood, praias e esporte de alto nível. LA é sede do Super Bowl LXI e palco das maiores franquias dos EUA.",
     imagem:
-      "https://images.unsplash.com/photo-1580655653885-65763b2597d1?q=80&w=1200",
+      "https://images.unsplash.com/photo-1444723121867-7a241cacace9?q=80&w=1200",
     eventos: 3,
     destaques: ["Super Bowl LXI", "NBA Lakers", "NFL Rams"],
     continente: "americas",
@@ -59,8 +58,7 @@ export const destinos: Destino[] = [
     bandeira: "🇲🇨",
     descricao:
       "O principado mais glamouroso da Europa é palco do Grand Prix mais icônico da Fórmula 1. Uma experiência que une esporte, luxo e exclusividade.",
-    imagem:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200",
+    imagem: "/images/hero-f1.jpg",
     eventos: 1,
     destaques: ["F1 Grand Prix", "Iate Club", "Cassino de Monte Carlo"],
     continente: "europa",
@@ -73,9 +71,9 @@ export const destinos: Destino[] = [
     descricao:
       "Capital do futebol mundial, sede de Wembley e do estádio de Wimbledon. Londres é um destino obrigatório para qualquer amante do esporte.",
     imagem:
-      "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=1200",
+      "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=1200",
     eventos: 4,
-    destaques: ["Champions League Final", "Wimbledon", "Premier League", "Rugby"],
+    destaques: ["Wimbledon", "Premier League", "NFL London", "Rugby"],
     continente: "europa",
   },
   {

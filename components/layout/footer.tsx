@@ -15,7 +15,7 @@ const footerLinks = {
     { label: "Sobre nós", href: "/sobre" },
     { label: "Blog", href: "/blog" },
     { label: "Contato", href: "/contato" },
-    { label: "Parceiros", href: "/parceiros" },
+    { label: "Destinos", href: "/destinos" },
   ],
   legal: [
     { label: "Termos de uso", href: "/termos" },
@@ -126,7 +126,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:contato@bluepanda.com.br"
+                  href="mailto:contato@bluepandatravel.com.br"
                   className="flex items-center gap-2 text-sm text-white/60 hover:text-gold transition-colors"
                 >
                   <Mail size={14} />

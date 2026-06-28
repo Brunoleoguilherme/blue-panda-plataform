@@ -10,8 +10,11 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
-      <div className="pt-36 pb-16 bg-[#060f22]">
-        <div className="container-bp">
+      <div className="relative pt-36 pb-16 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/hero-blog.jpg')" }} />
+        <div className="absolute inset-0 bg-midnight/80" />
+        <div className="container-bp relative z-10">
           <p className="text-xs font-semibold text-gold uppercase tracking-widest mb-3">
             Conteúdo exclusivo
           </p>

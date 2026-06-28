@@ -7,10 +7,10 @@ import { Linkedin, Instagram } from "lucide-react";
 
 const equipe = [
   {
-    nome: "Bruno Guilherme",
-    cargo: "Fundador & CEO",
-    bio: "Apaixonado por esportes e experiências internacionais. Criou a Blue Panda para transformar o jeito como brasileiros vivem grandes eventos.",
-    foto: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400",
+    nome: "Curadoria Esportiva",
+    cargo: "Especialistas em Eventos",
+    bio: "Time dedicado a selecionar e curar os melhores eventos esportivos do mundo, garantindo experiências únicas e inesquecíveis para cada cliente.",
+    foto: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=400",
     linkedin: "#",
     instagram: "#",
   },

@@ -12,8 +12,12 @@ export default function DestinosPage() {
   return (
     <>
       {/* Hero */}
-      <div className="relative pt-40 pb-20 bg-[#060f22] overflow-hidden">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gold/4 rounded-full blur-[150px] pointer-events-none" />
+      <div className="relative pt-40 pb-20 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/hero-destinos.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-midnight/75" />
         <div className="container-bp relative z-10">
           <p className="text-xs font-semibold text-gold uppercase tracking-widest mb-3">
             Onde estamos

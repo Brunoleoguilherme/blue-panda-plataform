@@ -107,6 +107,20 @@
   .animate-delay-400 { animation-delay: 400ms; }
   .animate-delay-500 { animation-delay: 500ms; }
 
+  /* Blog content styles */
+  .blog-content h2 {
+    @apply text-2xl font-bold text-white mt-10 mb-4;
+  }
+  .blog-content p {
+    @apply text-white/65 leading-relaxed mb-5;
+  }
+  .blog-content ul {
+    @apply list-disc list-inside space-y-2 mb-5 text-white/65;
+  }
+  .blog-content li {
+    @apply leading-relaxed;
+  }
+
   /* Hide scrollbar but keep scroll */
   .scrollbar-none {
     -ms-overflow-style: none;

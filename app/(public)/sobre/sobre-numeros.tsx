@@ -4,12 +4,12 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const numeros = [
-  { valor: "500+", label: "Clientes atendidos", desc: "Em todo o Brasil" },
-  { valor: "30+", label: "Eventos realizados", desc: "Em 4 continentes" },
-  { valor: "15+", label: "Países visitados", desc: "E crescendo" },
+  { valor: "+30", label: "Países", desc: "Em todo o mundo" },
+  { valor: "+60", label: "Eventos", desc: "Nacionais e internacionais" },
+  { valor: "+5 anos", label: "De mercado", desc: "Experiência comprovada" },
   { valor: "4.9★", label: "Avaliação média", desc: "No Google Reviews" },
-  { valor: "5 anos", label: "De mercado", desc: "Experiência comprovada" },
-  { valor: "100%", label: "Satisfação", desc: "Garantida" },
+  { valor: "100%", label: "Dedicação", desc: "Em cada experiência" },
+  { valor: "24h", label: "Suporte", desc: "Durante toda a viagem" },
 ];
 
 export function SobreNumeros() {

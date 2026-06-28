@@ -18,19 +18,19 @@ const testimonials = [
   },
   {
     id: "2",
-    name: "Mariana Albuquerque",
-    role: "Empresária · São Paulo",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200",
+    name: "Marcelo Oliveira",
+    role: "Diretor Comercial · Rio de Janeiro",
+    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200",
     content:
       "Nunca imaginei que assistir a uma final da Champions seria tão organizado. A equipe da Blue Panda estava disponível em todos os momentos. Recomendo demais.",
-    event: "Champions League Final 2025",
+    event: "Champions League 2025",
     rating: 5,
   },
   {
     id: "3",
-    name: "Marcelo Oliveira",
-    role: "Diretor Comercial · Rio de Janeiro",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200",
+    name: "Mariana Albuquerque",
+    role: "Empresária · São Paulo",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200",
     content:
       "Levei minha equipe comercial para a Fórmula 1 em Mônaco. A experiência foi impecável. Documentação, suporte, hospitalidade. Superou todas as expectativas.",
     event: "F1 Mônaco 2025",
@@ -84,27 +84,25 @@ export function Testimonials() {
               </p>
 
               {/* Footer */}
-              <div className="flex items-center gap-4 pt-4 border-t border-white/5">
-                <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
-                  <Image
-                    src={t.avatar}
-                    alt={t.name}
-                    fill
-                    className="object-cover"
-                    sizes="40px"
-                  />
+              <div className="pt-4 border-t border-white/5">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0">
+                    <Image
+                      src={t.avatar}
+                      alt={t.name}
+                      fill
+                      className="object-cover"
+                      sizes="40px"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-white">{t.name}</p>
+                    <p className="text-xs text-white/40">{t.role}</p>
+                  </div>
                 </div>
-                <div className="min-w-0">
-                  <p className="text-sm font-semibold text-white truncate">
-                    {t.name}
-                  </p>
-                  <p className="text-xs text-white/40 truncate">{t.role}</p>
-                </div>
-                <div className="ml-auto flex-shrink-0">
-                  <span className="text-xs text-gold/60 bg-gold/10 rounded-badge px-2 py-1">
-                    {t.event}
-                  </span>
-                </div>
+                <span className="inline-block text-xs text-gold/60 bg-gold/10 rounded-badge px-2 py-1 mt-1">
+                  {t.event}
+                </span>
               </div>
             </motion.div>
           ))}

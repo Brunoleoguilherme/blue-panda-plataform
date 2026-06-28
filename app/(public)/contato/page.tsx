@@ -12,8 +12,10 @@ export default function ContatoPage() {
   return (
     <>
       {/* Hero */}
-      <div className="pt-36 pb-16 bg-[#060f22] relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/4 rounded-full blur-[120px] pointer-events-none" />
+      <div className="pt-36 pb-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/hero-contato.jpg')" }} />
+        <div className="absolute inset-0 bg-midnight/80" />
         <div className="container-bp relative z-10">
           <p className="text-xs font-semibold text-gold uppercase tracking-widest mb-3">
             Vamos conversar

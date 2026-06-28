@@ -10,15 +10,15 @@ export function SobreHero() {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2400"
+          src="/images/hero-sobre.jpg"
           alt="Blue Panda Experience"
           fill
           className="object-cover object-center"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/60 to-midnight/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-midnight/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-midnight/70 to-transparent" />
       </div>
 
       <div className="container-bp relative z-10 pb-20 pt-40">

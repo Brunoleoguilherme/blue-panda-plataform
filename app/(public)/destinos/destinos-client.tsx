@@ -57,7 +57,7 @@ export function DestinosClient() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
               >
-                <Link href={`/destinos/${destino.slug}`}>
+                <Link href="/contato">
                   <article className="group overflow-hidden rounded-xl bg-navy border border-white/5 hover:border-gold/20 transition-all duration-300 hover:shadow-card-hover cursor-pointer h-full flex flex-col">
                     {/* Image */}
                     <div className="relative h-48 overflow-hidden flex-shrink-0">

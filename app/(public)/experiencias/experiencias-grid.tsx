@@ -8,68 +8,68 @@ import { ArrowRight } from "lucide-react";
 
 const experiencias = [
   {
-    slug: "como-e-viver-um-super-bowl",
+    slug: "super-bowl-2027",
+    href: "/eventos/super-bowl-lxi",
     categoria: "NFL",
     titulo: "Como é viver um Super Bowl",
     descricao:
       "O maior espetáculo do entretenimento mundial. Não é apenas um jogo — é uma semana inteira de emoções, shows, festas e cultura americana na sua forma mais intensa.",
-    imagem:
-      "https://images.unsplash.com/photo-1580974852861-c381510bc98a?q=80&w=1200",
+    imagem: "/images/hero-superbowl.jpg",
     destaque: "Experiência completa de 7 dias",
     cor: "from-blue-900/80",
   },
   {
-    slug: "como-e-assistir-formula1-monaco",
+    slug: "formula1-monaco-2026",
+    href: "/eventos/formula1-monaco-2026",
     categoria: "Fórmula 1",
     titulo: "Como é a F1 em Mônaco",
     descricao:
       "Ruas estreitas, iate no porto, o ronco dos motores a centímetros de você. Mônaco transforma o esporte em arte — e você estará dentro dessa obra.",
-    imagem:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=1200",
+    imagem: "/images/hero-f1.jpg",
     destaque: "O circuito mais glamouroso da história",
     cor: "from-red-900/80",
   },
   {
-    slug: "como-e-uma-final-da-champions",
+    slug: "champions-league-final-2026",
+    href: "/eventos/champions-league-final-2026",
     categoria: "Futebol",
     titulo: "Uma final da Champions League",
     descricao:
       "Hinos europeus, torcedores de todo o mundo, a tensão dos pênaltis. Estar em um estádio em uma final da Champions é uma experiência que define gerações.",
-    imagem:
-      "https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=1200",
+    imagem: "/images/hero-champions.jpg",
     destaque: "O maior palco do futebol mundial",
     cor: "from-green-900/80",
   },
   {
-    slug: "como-e-a-nfl-no-brasil",
+    slug: "nfl-brasil-2026",
+    href: "/eventos/nfl-brasil-2026",
     categoria: "NFL",
     titulo: "A NFL no Brasil",
     descricao:
-      "O futebol americano chegou ao Brasil — e com ele a maior festa esportiva que São Paulo já recebeu. Ingresso, pacote premium e a melhor localização no estádio.",
-    imagem:
-      "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1200",
+      "O futebol americano no lendário Maracanã. Baltimore Ravens x Dallas Cowboys com ingresso, pacote premium e a melhor localização no estádio.",
+    imagem: "/images/hero-nfl.jpg",
     destaque: "O maior evento esportivo do país",
     cor: "from-indigo-900/80",
   },
   {
-    slug: "como-e-o-us-open-de-tenis",
+    slug: "us-open-tenis",
+    href: "/contato",
     categoria: "Tênis",
     titulo: "O US Open em Nova York",
     descricao:
       "Nova York em agosto é pura energia. O US Open combina o melhor do tênis mundial com a cidade mais vibrante do planeta. Uma semana inesquecível.",
-    imagem:
-      "https://images.unsplash.com/photo-1554068865-24cecd4e34b8?q=80&w=1200",
+    imagem: "/images/hero-tenis.jpg",
     destaque: "Grand Slam + Manhattan",
     cor: "from-yellow-900/80",
   },
   {
-    slug: "como-e-as-finais-da-nba",
+    slug: "finais-nba",
+    href: "/contato",
     categoria: "NBA",
     titulo: "As Finais da NBA",
     descricao:
       "A quadra mais famosa do mundo, os maiores atletas do planeta, a emoção dos últimos segundos. Estar em uma final da NBA é entrar para a história.",
-    imagem:
-      "https://images.unsplash.com/photo-1546519638405-a1d748e3f3b1?q=80&w=1200",
+    imagem: "/images/hero-nfl.jpg",
     destaque: "A maior liga de basquete do mundo",
     cor: "from-purple-900/80",
   },
@@ -89,7 +89,7 @@ export function ExperienciasGrid() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
             >
-              <Link href={`/experiencias/${exp.slug}`}>
+              <Link href={exp.href}>
                 <article className="group relative overflow-hidden rounded-xl h-[420px] cursor-pointer">
                   <Image
                     src={exp.imagem}
@@ -138,7 +138,7 @@ export function ExperienciasGrid() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
             >
-              <Link href={`/experiencias/${exp.slug}`}>
+              <Link href={exp.href}>
                 <article className="group relative overflow-hidden rounded-xl h-72 cursor-pointer">
                   <Image
                     src={exp.imagem}

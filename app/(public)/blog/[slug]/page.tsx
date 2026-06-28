@@ -95,30 +95,11 @@ export default async function BlogPostPage({ params }: Props) {
               {post.resumo}
             </p>
 
-            {/* Placeholder content */}
-            <div className="prose prose-invert prose-lg max-w-none space-y-6 text-white/60 leading-relaxed">
-              <p>
-                Este artigo está sendo preparado pela equipe Blue Panda com
-                conteúdo exclusivo e aprofundado sobre o tema. Em breve
-                publicaremos o guia completo com todas as informações que você
-                precisa para viver essa experiência com excelência.
-              </p>
-              <p>
-                Enquanto isso, entre em contato com nossa equipe pelo WhatsApp
-                ou pelo formulário de contato para tirar suas dúvidas e planejar
-                sua próxima experiência esportiva internacional.
-              </p>
-              <div className="bg-navy/50 border border-gold/15 rounded-xl p-6 my-8">
-                <p className="text-gold font-semibold text-sm mb-2">
-                  💡 Dica Blue Panda
-                </p>
-                <p className="text-white/60 text-sm">
-                  Planeje com antecedência. Os melhores ingressos e hotéis
-                  esgotam rapidamente para eventos como este. Nossa equipe pode
-                  ajudá-lo a garantir a melhor experiência possível.
-                </p>
-              </div>
-            </div>
+            {/* Conteúdo do artigo */}
+            <div
+              className="blog-content prose prose-invert prose-lg max-w-none text-white/65 leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: post.conteudo }}
+            />
 
             {/* CTA inline */}
             <div className="mt-12 p-8 rounded-xl border border-gold/15 bg-navy/40 text-center">

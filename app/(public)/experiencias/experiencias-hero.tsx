@@ -5,9 +5,13 @@ import { motion } from "framer-motion";
 
 export function ExperienciasHero() {
   return (
-    <section className="relative pt-40 pb-24 bg-[#060f22] overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gold/5 rounded-full blur-[120px] pointer-events-none" />
+    <section className="relative pt-40 pb-24 overflow-hidden">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/images/hero-experiencias.jpg')" }}
+      />
+      <div className="absolute inset-0 bg-midnight/80" />
 
       <div className="container-bp relative z-10 text-center max-w-3xl mx-auto">
         <motion.div

@@ -7,9 +7,9 @@ import { ArrowRight, Play, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const upcoming = [
-  { label: "NFL Brasil", local: "São Paulo" },
+  { label: "NFL Brasil", local: "Rio de Janeiro" },
   { label: "F1 Monaco", local: "Monte Carlo" },
-  { label: "Champions Final", local: "Wembley" },
+  { label: "Champions Final", local: "Budapeste" },
 ];
 
 export function Hero() {
@@ -42,7 +42,7 @@ export function Hero() {
               >
                 <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
                 <span className="text-xs font-semibold text-gold tracking-widest uppercase">
-                  Sua agência especializada em experiências esportivas premium
+                  Especialistas em experiências premium
                 </span>
               </motion.div>
 
@@ -53,9 +53,9 @@ export function Hero() {
                 transition={{ duration: 0.7, delay: 0.1 }}
                 className="text-4xl sm:text-5xl xl:text-[64px] font-bold leading-[1.08] text-white mb-5"
               >
-                Experiências que vão
+                Experiências que vão além
                 <br />
-                <span className="text-gold-gradient">além do seu destino!</span>
+                <span className="text-gold-gradient">do seu destino!</span>
               </motion.h1>
 
               {/* Sub */}
