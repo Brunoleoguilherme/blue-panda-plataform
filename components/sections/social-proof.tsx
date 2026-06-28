@@ -33,7 +33,7 @@ export function SocialProof() {
           className="text-center mb-16"
         >
           <p className="text-xs font-semibold text-white/30 uppercase tracking-widest mb-8">
-            Eventos que já realizamos
+            Vivências esportivas que clientes Blue Panda vivenciaram
           </p>
           <div className="flex flex-wrap items-center justify-center gap-8">
             {partners.map((partner) => (

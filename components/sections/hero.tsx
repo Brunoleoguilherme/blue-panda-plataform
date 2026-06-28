@@ -38,11 +38,11 @@ export function Hero() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-badge px-4 py-2 mb-7"
+                className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-badge px-4 py-2 mb-10 mt-6"
               >
                 <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
                 <span className="text-xs font-semibold text-gold tracking-widest uppercase">
-                  Experiências Esportivas Premium
+                  Sua agência especializada em experiências esportivas premium
                 </span>
               </motion.div>
 
@@ -55,7 +55,7 @@ export function Hero() {
               >
                 Experiências que vão
                 <br />
-                <span className="text-gold-gradient">além do destino.</span>
+                <span className="text-gold-gradient">além do seu destino!</span>
               </motion.h1>
 
               {/* Sub */}
@@ -65,8 +65,7 @@ export function Hero() {
                 transition={{ duration: 0.7, delay: 0.2 }}
                 className="text-base sm:text-lg text-white/60 leading-relaxed mb-9 max-w-lg"
               >
-                Acesso aos maiores eventos esportivos do mundo com atendimento
-                premium, hospitalidade e organização impecável.
+                Acesso aos maiores palcos do esporte mundial, com serviços personalizados de curadoria, hospitality e especialistas bilíngues que conduzem cada detalhe da sua viagem.
               </motion.p>
 
               {/* CTAs */}
@@ -74,7 +73,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
-                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-12"
+                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3"
               >
                 <Link href="/contato">
                   <Button variant="primary" size="lg" className="group w-full sm:w-auto">
@@ -94,25 +93,6 @@ export function Hero() {
                 </Link>
               </motion.div>
 
-              {/* Stats */}
-              <motion.div
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.4 }}
-                className="flex items-center gap-8 pt-8 border-t border-white/10"
-              >
-                {[
-                  { value: "500+", label: "Clientes" },
-                  { value: "30+", label: "Eventos" },
-                  { value: "15+", label: "Países" },
-                  { value: "4.9★", label: "Avaliação" },
-                ].map((s) => (
-                  <div key={s.label} className="text-center sm:text-left">
-                    <p className="text-2xl sm:text-3xl font-bold text-gold leading-none">{s.value}</p>
-                    <p className="text-[11px] text-white/40 mt-1 uppercase tracking-wide">{s.label}</p>
-                  </div>
-                ))}
-              </motion.div>
             </div>
 
             {/* RIGHT — upcoming events float card (desktop only) */}
@@ -159,7 +139,6 @@ export function Hero() {
         transition={{ delay: 1.2, duration: 0.6 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2"
       >
-        <span className="text-[10px] text-white/25 tracking-widest uppercase">Scroll</span>
         <div className="w-px h-10 bg-gradient-to-b from-white/25 to-transparent" />
       </motion.div>
     </section>
