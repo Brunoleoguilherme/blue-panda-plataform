@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
 const stats = [
-  { value: "500+", label: "Experiências entregues" },
-  { value: "5 anos", label: "De mercado" },
+  { value: "+30", label: "Países" },
+  { value: "+60", label: "Eventos nacionais e internacionais" },
+  { value: "+5 anos", label: "De mercado" },
   { value: "4.9★", label: "Avaliação média" },
-  { value: "100%", label: "Satisfação garantida" },
 ];
 
 const partners = [
