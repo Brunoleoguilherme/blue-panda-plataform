@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Fonts ────────────────────────────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+@font-face {
+  font-family: "Garet";
+  src: url("/fonts/Garet-Book.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Garet";
+  src: url("/fonts/Garet-Heavy.woff2") format("woff2");
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Base ──────────────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    --midnight: #081a3a;
+    --navy: #0f2f63;
+    --azure: #3f6fb5;
+    --gold: #c8a54d;
+    --gold-light: #ddbb67;
+    --surface: #f8f9fb;
+    --border: #e9edf3;
+    --muted: #6b7280;
+
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-midnight text-white antialiased;
+    font-family: "Garet", "Inter", system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Garet", "Inter", system-ui, sans-serif;
+    font-weight: 700;
+  }
+
+  ::selection {
+    background-color: #c8a54d;
+    color: #081a3a;
+  }
+}
+
+/* ─── Components ────────────────────────────────────────────────────────────── */
+@layer components {
+  /* Glass card */
+  .glass {
+    background: rgba(15, 47, 99, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(200, 165, 77, 0.15);
+  }
+
+  /* Gold gradient text */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #c8a54d 0%, #ddbb67 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Section container */
+  .section {
+    @apply py-20 md:py-28;
+  }
+
+  .container-bp {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--midnight);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--navy);
+    border-radius: 3px;
+  }
+}
+
+/* ─── Utilities ─────────────────────────────────────────────────────────────── */
+@layer utilities {
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+
+  /* Hide scrollbar but keep scroll */
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
