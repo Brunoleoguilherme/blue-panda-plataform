@@ -9,7 +9,7 @@ import { ArrowRight } from "lucide-react";
 const experiencias = [
   {
     slug: "super-bowl-2027",
-    href: "/eventos/super-bowl-lxi",
+    href: "/experiencias/super-bowl",
     categoria: "NFL",
     titulo: "Como é viver um Super Bowl",
     descricao:
@@ -20,7 +20,7 @@ const experiencias = [
   },
   {
     slug: "formula1-monaco-2026",
-    href: "/eventos/formula1-monaco-2026",
+    href: "/experiencias/formula1",
     categoria: "Fórmula 1",
     titulo: "Como é a F1 em Mônaco",
     descricao:
@@ -31,7 +31,7 @@ const experiencias = [
   },
   {
     slug: "champions-league-final-2026",
-    href: "/eventos/champions-league-final-2026",
+    href: "/experiencias/champions-league",
     categoria: "Futebol",
     titulo: "Uma final da Champions League",
     descricao:
@@ -42,7 +42,7 @@ const experiencias = [
   },
   {
     slug: "nfl-brasil-2026",
-    href: "/eventos/nfl-brasil-2026",
+    href: "/experiencias/nfl",
     categoria: "NFL",
     titulo: "A NFL no Brasil",
     descricao:
@@ -53,7 +53,7 @@ const experiencias = [
   },
   {
     slug: "us-open-tenis",
-    href: "/contato",
+    href: "/experiencias/us-open",
     categoria: "Tênis",
     titulo: "O US Open em Nova York",
     descricao:
@@ -64,12 +64,12 @@ const experiencias = [
   },
   {
     slug: "finais-nba",
-    href: "/contato",
+    href: "/experiencias/nba",
     categoria: "NBA",
     titulo: "As Finais da NBA",
     descricao:
       "A quadra mais famosa do mundo, os maiores atletas do planeta, a emoção dos últimos segundos. Estar em uma final da NBA é entrar para a história.",
-    imagem: "/images/hero-nfl.jpg",
+    imagem: "/images/hero-nba.jpg",
     destaque: "A maior liga de basquete do mundo",
     cor: "from-purple-900/80",
   },
