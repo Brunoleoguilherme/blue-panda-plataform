@@ -33,7 +33,7 @@ export function BlogClient() {
             transition={{ duration: 0.6 }}
             className="mb-14"
           >
-            <Link href={`/blog/${destaque.slug}`}>
+            <Link href="/contato">
               <article className="group grid grid-cols-1 lg:grid-cols-2 rounded-xl overflow-hidden border border-white/5 hover:border-gold/20 transition-all duration-300 hover:shadow-card-hover cursor-pointer">
                 {/* Image */}
                 <div className="relative h-64 lg:h-auto min-h-[300px] overflow-hidden">
@@ -133,7 +133,7 @@ export function BlogClient() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: i * 0.07 }}
                 >
-                  <Link href={`/blog/${post.slug}`}>
+                  <Link href="/contato">
                     <article className="group overflow-hidden rounded-xl bg-navy border border-white/5 hover:border-gold/20 transition-all duration-300 hover:shadow-card cursor-pointer h-full flex flex-col">
                       {/* Image */}
                       <div className="relative h-48 overflow-hidden flex-shrink-0">

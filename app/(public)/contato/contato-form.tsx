@@ -32,6 +32,7 @@ const eventosOpcoes = [
   "Super Bowl LXI",
   "US Open 2026",
   "NBA Finals 2026",
+  "Brasil Flag World Championship 2026",
   "Outro evento",
 ];
 

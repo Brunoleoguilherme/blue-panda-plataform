@@ -5,19 +5,16 @@ import { motion } from "framer-motion";
 import {
   MessageCircle,
   Mail,
-  Phone,
-  Clock,
   Instagram,
-  MapPin,
 } from "lucide-react";
 
 const canais = [
   {
     icon: MessageCircle,
     titulo: "WhatsApp",
-    valor: "+55 (11) 99999-9999",
+    valor: "+55 (11) 94044-0078",
     descricao: "Resposta imediata em horário comercial",
-    href: "https://wa.me/5511999999999",
+    href: "https://wa.me/5511940440078",
     destaque: true,
   },
   {
@@ -29,28 +26,15 @@ const canais = [
     destaque: false,
   },
   {
-    icon: Phone,
-    titulo: "Telefone",
-    valor: "+55 (11) 3333-4444",
-    descricao: "De segunda a sexta, 9h às 18h",
-    href: "tel:+551133334444",
-    destaque: false,
-  },
-  {
     icon: Instagram,
     titulo: "Instagram",
-    valor: "@bluepandatravel",
+    valor: "@bluepanda.travel",
     descricao: "Fotos, vídeos e novidades",
-    href: "https://instagram.com/bluepandatravel",
+    href: "https://instagram.com/bluepanda.travel",
     destaque: false,
   },
 ];
 
-const horarios = [
-  { dia: "Segunda a Sexta", horario: "9h às 18h" },
-  { dia: "Sábado", horario: "9h às 13h" },
-  { dia: "Domingo e Feriados", horario: "Emergências apenas" },
-];
 
 export function ContatoInfo() {
   return (
@@ -110,52 +94,6 @@ export function ContatoInfo() {
             </a>
           ))}
         </div>
-      </motion.div>
-
-      {/* Horários */}
-      <motion.div
-        initial={{ opacity: 0, x: 24 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, delay: 0.15 }}
-        className="p-6 rounded-xl border border-white/5 bg-navy/30"
-      >
-        <div className="flex items-center gap-2 mb-5">
-          <Clock size={16} className="text-gold/60" />
-          <p className="text-xs font-semibold text-gold uppercase tracking-widest">
-            Horário de atendimento
-          </p>
-        </div>
-        <div className="space-y-3">
-          {horarios.map((h) => (
-            <div
-              key={h.dia}
-              className="flex items-center justify-between py-2 border-b border-white/5 last:border-0"
-            >
-              <span className="text-sm text-white/55">{h.dia}</span>
-              <span className="text-sm font-semibold text-white">{h.horario}</span>
-            </div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Localização */}
-      <motion.div
-        initial={{ opacity: 0, x: 24 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, delay: 0.25 }}
-        className="p-6 rounded-xl border border-white/5 bg-navy/30"
-      >
-        <div className="flex items-center gap-2 mb-3">
-          <MapPin size={16} className="text-gold/60" />
-          <p className="text-xs font-semibold text-gold uppercase tracking-widest">
-            Localização
-          </p>
-        </div>
-        <p className="text-sm text-white/55 leading-relaxed">
-          São Paulo — SP, Brasil
-          <br />
-          Atendimento presencial com agendamento.
-        </p>
       </motion.div>
 
       {/* Promessa */}

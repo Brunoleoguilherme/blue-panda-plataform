@@ -15,38 +15,38 @@ const steps = [
   {
     icon: Search,
     numero: "01",
-    titulo: "Você descobre",
-    descricao: "Encontra o evento dos sonhos no nosso site.",
+    titulo: "Você sonha",
+    descricao: "Escolhe o evento que sempre quis viver de perto.",
   },
   {
     icon: MessageCircle,
     numero: "02",
-    titulo: "Nós planejamos",
-    descricao: "Nossa equipe cria um pacote exclusivo para você.",
+    titulo: "Personalizamos",
+    descricao: "Criamos uma experiência sob medida, pensada em você.",
   },
   {
     icon: FileText,
     numero: "03",
-    titulo: "Tudo organizado",
-    descricao: "Ingressos, hotel, transfer e documentos no seu portal.",
+    titulo: "Planejamento",
+    descricao: "Seguros, passagens, ingressos, hospedagem, transfers, experience.",
   },
   {
     icon: Plane,
     numero: "04",
-    titulo: "Você viaja",
-    descricao: "Suporte 24h durante toda a experiência.",
+    titulo: "Cuidado",
+    descricao: "Um concierge dedicado ao seu lado todos os dias, para que tudo seja perfeito.",
   },
   {
     icon: Star,
     numero: "05",
-    titulo: "Você vive",
-    descricao: "Momentos que vão durar para sempre.",
+    titulo: "Vivência",
+    descricao: "A emoção de estar presente, colecionando grandes momentos.",
   },
   {
     icon: Heart,
     numero: "06",
-    titulo: "Você volta",
-    descricao: "E já começa a pensar na próxima experiência.",
+    titulo: "Memórias",
+    descricao: "Uma lembrança que dura a vida inteira e a vontade de viver a próxima.",
   },
 ];
 
@@ -65,7 +65,9 @@ export function ExperienciasJourney() {
             A jornada Blue Panda
           </p>
           <h2 className="text-4xl font-bold text-white mb-4">
-            Do primeiro clique à última lembrança
+            Do desejo de viver o extraordinário,
+            <br />
+            à lembrança que ficará para sempre!
           </h2>
           <p className="text-white/50 leading-relaxed">
             A sua experiência começa muito antes da viagem — e continua muito

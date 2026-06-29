@@ -90,7 +90,7 @@ export function WhyUs() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16 text-center"
         >
-          <p className="text-2xl lg:text-3xl font-serif italic text-white/75 leading-tight whitespace-nowrap">
+          <p className="text-lg sm:text-2xl lg:text-3xl font-serif italic text-white/75 leading-snug max-w-4xl mx-auto">
             "Nós cuidamos da experiência para que o cliente cuide apenas de viver o momento."
           </p>
         </motion.div>

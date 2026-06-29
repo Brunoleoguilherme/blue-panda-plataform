@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { events } from "@/lib/events-data";
 import { EventoHero } from "./evento-hero";
 import { EventoIncluso } from "./evento-incluso";
+import { EventoInclusoFlag } from "./evento-incluso-flag";
 import { EventoCronograma } from "./evento-cronograma";
 import { EventoFaq } from "./evento-faq";
 import { EventoCta } from "./evento-cta";
@@ -33,7 +34,7 @@ export default async function EventoPage({ params }: Props) {
   return (
     <>
       <EventoHero event={event} />
-      <EventoIncluso />
+      {event.category === "flag" ? <EventoInclusoFlag /> : <EventoIncluso />}
       <EventoCronograma event={event} />
       <EventoFaq />
       <EventoCta event={event} />

@@ -16,7 +16,7 @@ const etapas = [
     icon: Hotel,
     dia: "Dia 2",
     titulo: "Exploração",
-    descricao: "Café da manhã incluso. City tour guiado. Jantar em restaurante selecionado.",
+    descricao: "Café da manhã incluso. Tempo livre para explorar a cidade no seu ritmo.",
   },
   {
     icon: Ticket,

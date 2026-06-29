@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Instagram, MessageCircle, Mail, Phone } from "lucide-react";
+import { Instagram, MessageCircle, Mail } from "lucide-react";
 
 const footerLinks = {
   experiencias: [
@@ -32,7 +32,7 @@ const socialLinks = [
   },
   {
     label: "WhatsApp",
-    href: "https://wa.me/5511999999999",
+    href: "https://wa.me/5511940440078",
     icon: MessageCircle,
   },
 ];
@@ -117,7 +117,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://wa.me/5511999999999"
+                  href="https://wa.me/5511940440078"
                   className="flex items-center gap-2 text-sm text-white/60 hover:text-gold transition-colors"
                 >
                   <MessageCircle size={14} />
@@ -135,11 +135,11 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+5511999999999"
+                  href="https://instagram.com/bluepanda.travel"
                   className="flex items-center gap-2 text-sm text-white/60 hover:text-gold transition-colors"
                 >
-                  <Phone size={14} />
-                  Telefone
+                  <Instagram size={14} />
+                  @bluepanda.travel
                 </a>
               </li>
             </ul>

@@ -31,7 +31,7 @@ export function SobreHero() {
           <p className="text-xs font-semibold text-gold uppercase tracking-widest mb-4">
             Quem somos
           </p>
-          <h1 className="text-5xl lg:text-[56px] font-bold text-white leading-tight mb-6">
+          <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-bold text-white leading-tight mb-6">
             Não somos uma agência
             <br />
             <span className="text-gold-gradient">de viagens.</span>

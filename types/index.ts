@@ -22,6 +22,7 @@ export type EventCategory =
   | "nfl"
   | "nba"
   | "tenis"
+  | "flag"
   | "outros";
 
 /* ─── Testimonial ────────────────────────────────────────────────────────────── */

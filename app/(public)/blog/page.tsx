@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
-      <div className="relative pt-36 pb-16 overflow-hidden">
+      <div className="relative pt-28 sm:pt-36 pb-10 sm:pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/images/hero-blog.jpg')" }} />
         <div className="absolute inset-0 bg-midnight/80" />
@@ -18,7 +18,7 @@ export default function BlogPage() {
           <p className="text-xs font-semibold text-gold uppercase tracking-widest mb-3">
             Conteúdo exclusivo
           </p>
-          <h1 className="text-5xl font-bold text-white mb-4">Blog</h1>
+          <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4">Blog</h1>
           <p className="text-white/50 text-lg max-w-xl">
             Guias, dicas, relatos e tudo que você precisa saber para viver
             experiências esportivas inesquecíveis.

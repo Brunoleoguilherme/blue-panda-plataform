@@ -87,6 +87,23 @@ export const events: Event[] = [
     updatedAt: "2026-01-01",
   },
   {
+    id: "7",
+    slug: "brasil-flag-world-championship-2026",
+    title: "Brasil Flag World Championship 2026",
+    subtitle: "O maior campeonato de flag football do Brasil",
+    description:
+      "O Brasil recebe o mundo para o maior campeonato internacional de flag football já realizado no país. Com categorias masculina, feminina, Sub 15 e Sub 12, o evento reúne clubes e atletas de todo o mundo em Leme, SP. A Blue Panda é patrocinadora oficial — garanta sua experiência completa.",
+    date: "2026-10-31",
+    location: "Leme",
+    country: "Brasil",
+    category: "flag",
+    coverImage: "/images/hero-mundial.jpg",
+    featured: false,
+    status: "open",
+    createdAt: "2026-01-01",
+    updatedAt: "2026-01-01",
+  },
+  {
     id: "6",
     slug: "nba-finals-2026",
     title: "NBA Finals 2026",
@@ -112,6 +129,7 @@ export const categories: { value: EventCategory | "todos"; label: string }[] = [
   { value: "nfl", label: "NFL" },
   { value: "nba", label: "NBA" },
   { value: "tenis", label: "Tênis" },
+  { value: "flag", label: "Flag Football" },
   { value: "outros", label: "Outros" },
 ];
 

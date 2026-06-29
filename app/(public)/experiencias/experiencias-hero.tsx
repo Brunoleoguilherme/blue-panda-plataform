@@ -29,11 +29,12 @@ export function ExperienciasHero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
-          className="text-5xl lg:text-[56px] font-bold text-white leading-tight mb-6"
+          className="text-3xl sm:text-5xl lg:text-[56px] font-bold text-white leading-tight mb-6"
         >
-          Nós não vendemos viagens.
+          O mundo dos esportes possui{" "}
+          <span className="text-gold-gradient">palcos inesquecíveis.</span>
           <br />
-          <span className="text-gold-gradient">Nós criamos memórias.</span>
+          Nós levamos você ao encontro de todos eles.
         </motion.h1>
 
         <motion.p
@@ -42,9 +43,9 @@ export function ExperienciasHero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-lg text-white/55 leading-relaxed font-serif italic"
         >
-          Enquanto outras empresas organizam logística, a Blue Panda organiza
-          emoções. Cada experiência é desenhada para que você cuide apenas
-          de viver o momento.
+          Mais do que organizar viagens, desenhamos cada detalhe que deixa
+          mais perto de viver grandes emoções em cada experiência pensada
+          para que você viva intensamente cada momento.
         </motion.p>
       </div>
     </section>

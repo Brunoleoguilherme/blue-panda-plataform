@@ -89,7 +89,7 @@ export function EventoHero({ event }: Props) {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.15 }}
-              className="text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight"
+              className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight"
             >
               {event.title}
             </motion.h1>
@@ -144,7 +144,7 @@ export function EventoHero({ event }: Props) {
                 </Button>
               </Link>
               <a
-                href="https://wa.me/5511999999999"
+                href="https://wa.me/5511940440078"
                 target="_blank"
                 rel="noopener noreferrer"
               >

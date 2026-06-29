@@ -44,7 +44,7 @@ export function Header() {
             alt="Blue Panda Travel"
             width={300}
             height={105}
-            className="h-40 sm:h-48 w-auto object-contain"
+            className="h-16 sm:h-20 lg:h-28 w-auto object-contain"
             priority
           />
         </Link>

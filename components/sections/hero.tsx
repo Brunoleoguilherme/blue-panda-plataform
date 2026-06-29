@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 const upcoming = [
   { label: "NFL Brasil", local: "Rio de Janeiro" },
   { label: "F1 Monaco", local: "Monte Carlo" },
-  { label: "Champions Final", local: "Budapeste" },
+  { label: "NFL Brasil 2026", local: "Rio de Janeiro" },
 ];
 
 export function Hero() {
@@ -51,7 +51,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.1 }}
-                className="text-4xl sm:text-5xl xl:text-[64px] font-bold leading-[1.08] text-white mb-5"
+                className="text-3xl sm:text-5xl xl:text-[64px] font-bold leading-[1.08] text-white mb-5"
               >
                 Experiências que vão além
                 <br />
