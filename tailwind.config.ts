@@ -76,8 +76,8 @@ const config: Config = {
         ring: "#C8A54D",
       },
       fontFamily: {
-        sans: ["Garet", "Inter", "system-ui", "sans-serif"],
-        serif: ["Libre Baskerville", "Georgia", "serif"],
+        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
       },
       fontSize: {
         hero: ["72px", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
