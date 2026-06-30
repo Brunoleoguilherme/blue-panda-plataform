@@ -80,7 +80,7 @@ export function EventoInclusoFlag() {
             O que a Blue Panda oferece
           </h2>
           <p className="text-white/50 leading-relaxed">
-            O evento é gratuito para torcedores. A Blue Panda cuida de tudo o que envolve a experiência do seu time — hospedagem, transfers, alimentação e suporte dedicado antes, durante e depois do campeonato.
+            O evento é gratuito para torcedores. A Blue Panda cuida de tudo o que envolve a experiência do seu time: hospedagem, transfers, alimentação e suporte dedicado antes, durante e depois do campeonato.
           </p>
         </motion.div>
 

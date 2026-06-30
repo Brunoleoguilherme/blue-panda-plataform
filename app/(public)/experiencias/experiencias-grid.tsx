@@ -13,7 +13,7 @@ const experiencias = [
     categoria: "NFL",
     titulo: "Como é viver um Super Bowl",
     descricao:
-      "O maior espetáculo do entretenimento mundial. Não é apenas um jogo — é uma semana inteira de emoções, shows, festas e cultura americana na sua forma mais intensa.",
+      "O maior espetáculo do entretenimento mundial. Não é apenas um jogo,é uma semana inteira de emoções, shows, festas e cultura americana na sua forma mais intensa.",
     imagem: "/images/hero-superbowl.jpg",
     destaque: "Experiência completa de 7 dias",
     cor: "from-blue-900/80",
@@ -24,7 +24,7 @@ const experiencias = [
     categoria: "Fórmula 1",
     titulo: "Como é a F1 em Mônaco",
     descricao:
-      "Ruas estreitas, iate no porto, o ronco dos motores a centímetros de você. Mônaco transforma o esporte em arte — e você estará dentro dessa obra.",
+      "Ruas estreitas, iate no porto, o ronco dos motores a centímetros de você. Mônaco transforma o esporte em arte,e você estará dentro dessa obra.",
     imagem: "/images/hero-f1.jpg",
     destaque: "O circuito mais glamouroso da história",
     cor: "from-red-900/80",
@@ -79,7 +79,7 @@ export function ExperienciasGrid() {
   return (
     <section className="section bg-midnight">
       <div className="container-bp">
-        {/* Featured — first item large */}
+        {/* Featured,first item large */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
           {experiencias.slice(0, 2).map((exp, i) => (
             <motion.div
@@ -128,7 +128,7 @@ export function ExperienciasGrid() {
           ))}
         </div>
 
-        {/* Remaining — 4 smaller */}
+        {/* Remaining,4 smaller */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {experiencias.slice(2).map((exp, i) => (
             <motion.div

@@ -39,7 +39,7 @@ export const events: Event[] = [
     id: "3",
     slug: "champions-league-final-2026",
     title: "Champions League Final",
-    subtitle: "PSG x Arsenal — Puskás Aréna",
+    subtitle: "PSG x Arsenal · Puskás Aréna",
     description:
       "A maior final do futebol europeu. PSG e Arsenal se enfrentam em Budapeste no dia 30/05/2026. Ingresso, hotel premium e experiência VIP na capital húngara.",
     date: "2026-05-30",

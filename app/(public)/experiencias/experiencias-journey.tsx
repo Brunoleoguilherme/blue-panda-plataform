@@ -70,7 +70,7 @@ export function ExperienciasJourney() {
             à lembrança que ficará para sempre!
           </h2>
           <p className="text-white/50 leading-relaxed">
-            A sua experiência começa muito antes da viagem — e continua muito
+            A sua experiência começa muito antes da viagem e continua muito
             depois do retorno.
           </p>
         </motion.div>

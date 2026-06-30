@@ -35,7 +35,7 @@ const events = [
     id: "3",
     slug: "champions-league-final-2026",
     title: "Champions League Final",
-    subtitle: "PSG x Arsenal — Puskás Aréna",
+    subtitle: "PSG x Arsenal · Puskás Aréna",
     date: "30 Mai 2026",
     location: "Budapeste, Hungria",
     image: "/images/hero-champions.jpg",

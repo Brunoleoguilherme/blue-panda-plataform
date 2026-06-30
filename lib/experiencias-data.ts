@@ -1,6 +1,8 @@
 export interface Experiencia {
   slug: string;
   categoria: string;
+  tituloParte1: string;
+  tituloParte2: string;
   titulo: string;
   subtitulo: string;
   descricao: string;
@@ -12,23 +14,25 @@ export interface Experiencia {
     topicos: { titulo: string; texto: string }[];
     cta: string;
   };
-  eventosRelacionados: string[]; // slugs de eventos
+  eventosRelacionados: string[];
 }
 
 export const experiencias: Experiencia[] = [
   {
     slug: "super-bowl",
     categoria: "NFL",
+    tituloParte1: "Como é viver",
+    tituloParte2: "um Super Bowl",
     titulo: "Como é viver um Super Bowl",
     subtitulo: "O maior espetáculo do entretenimento mundial",
     descricao:
-      "O maior espetáculo do entretenimento mundial. Não é apenas um jogo — é uma semana inteira de emoções, shows, festas e cultura americana na sua forma mais intensa.",
+      "O maior espetáculo do entretenimento mundial. Não é apenas um jogo, é uma semana inteira de emoções, shows, festas e cultura americana na sua forma mais intensa.",
     imagem: "/images/hero-superbowl.jpg",
     destaque: "Experiência completa de 7 dias",
     cor: "from-blue-900/80",
     conteudo: {
       intro:
-        "O Super Bowl é mais do que um jogo de futebol americano. É o maior evento de entretenimento do planeta — uma semana inteira de festas, eventos exclusivos, shows históricos e a emoção do maior palco do esporte mundial.",
+        "O Super Bowl é mais do que um jogo de futebol americano. É o maior evento de entretenimento do planeta, uma semana inteira de festas, eventos exclusivos, shows históricos e a emoção do maior palco do esporte mundial.",
       topicos: [
         {
           titulo: "A semana do Super Bowl",
@@ -38,7 +42,7 @@ export const experiencias: Experiencia[] = [
         {
           titulo: "O halftime show",
           texto:
-            "O intervalo do Super Bowl é um dos maiores shows de música do mundo. Artistas icônicos se apresentam para mais de 100 milhões de telespectadores — e você estará lá, ao vivo.",
+            "O intervalo do Super Bowl é um dos maiores shows de música do mundo. Artistas icônicos se apresentam para mais de 100 milhões de telespectadores e você estará lá, ao vivo.",
         },
         {
           titulo: "A experiência Blue Panda",
@@ -53,10 +57,12 @@ export const experiencias: Experiencia[] = [
   {
     slug: "formula1",
     categoria: "Fórmula 1",
+    tituloParte1: "Como é a",
+    tituloParte2: "F1 em Mônaco",
     titulo: "Como é a F1 em Mônaco",
     subtitulo: "O circuito mais glamouroso da história",
     descricao:
-      "Ruas estreitas, iate no porto, o ronco dos motores a centímetros de você. Mônaco transforma o esporte em arte — e você estará dentro dessa obra.",
+      "Ruas estreitas, iate no porto, o ronco dos motores a centímetros de você. Mônaco transforma o esporte em arte e você estará dentro dessa obra.",
     imagem: "/images/hero-f1.jpg",
     destaque: "O circuito mais glamouroso da história",
     cor: "from-red-900/80",
@@ -67,7 +73,7 @@ export const experiencias: Experiencia[] = [
         {
           titulo: "O circuito das ruas",
           texto:
-            "Diferente de qualquer outra etapa, Mônaco acontece nas ruas da cidade. Cada curva, cada reta, cada ultrapassagem é sentida de perto — a adrenalina é diferente de qualquer outro lugar.",
+            "Diferente de qualquer outra etapa, Mônaco acontece nas ruas da cidade. Cada curva, cada reta, cada ultrapassagem é sentida de perto. A adrenalina é diferente de qualquer outro lugar.",
         },
         {
           titulo: "A hospitalidade do principado",
@@ -87,6 +93,8 @@ export const experiencias: Experiencia[] = [
   {
     slug: "champions-league",
     categoria: "Futebol",
+    tituloParte1: "Uma final da",
+    tituloParte2: "Champions League",
     titulo: "Uma final da Champions League",
     subtitulo: "O maior palco do futebol mundial",
     descricao:
@@ -101,7 +109,7 @@ export const experiencias: Experiencia[] = [
         {
           titulo: "O hino da Champions",
           texto:
-            "Quando o hino toca no estádio, arrepios tomam conta de todo mundo. É um ritual que pertence à história do esporte — e você fará parte dele.",
+            "Quando o hino toca no estádio, arrepios tomam conta de todo mundo. É um ritual que pertence à história do esporte e você fará parte dele.",
         },
         {
           titulo: "A cidade e o estádio",
@@ -121,6 +129,8 @@ export const experiencias: Experiencia[] = [
   {
     slug: "nfl",
     categoria: "NFL",
+    tituloParte1: "A NFL",
+    tituloParte2: "no Brasil",
     titulo: "A NFL no Brasil",
     subtitulo: "O maior evento esportivo do país",
     descricao:
@@ -130,7 +140,7 @@ export const experiencias: Experiencia[] = [
     cor: "from-indigo-900/80",
     conteudo: {
       intro:
-        "A NFL chegou ao Brasil — e a Blue Panda está lá para garantir que você viva cada segundo dessa história. Baltimore Ravens x Dallas Cowboys no lendário Maracanã, em um evento que vai marcar a cultura esportiva brasileira.",
+        "A NFL chegou ao Brasil e a Blue Panda está lá para garantir que você viva cada segundo dessa história. Baltimore Ravens x Dallas Cowboys no lendário Maracanã, em um evento que vai marcar a cultura esportiva brasileira.",
       topicos: [
         {
           titulo: "O Maracanã como palco da NFL",
@@ -140,7 +150,7 @@ export const experiencias: Experiencia[] = [
         {
           titulo: "A experiência norte-americana em solo brasileiro",
           texto:
-            "Cheerleaders, shows, ativações das franquias, gastronomia americana e todo o espetáculo que a NFL leva para onde vai — agora no Rio de Janeiro.",
+            "Cheerleaders, shows, ativações das franquias, gastronomia americana e todo o espetáculo que a NFL leva para onde vai, agora no Rio de Janeiro.",
         },
         {
           titulo: "A experiência Blue Panda",
@@ -155,6 +165,8 @@ export const experiencias: Experiencia[] = [
   {
     slug: "us-open",
     categoria: "Tênis",
+    tituloParte1: "O US Open",
+    tituloParte2: "em Nova York",
     titulo: "O US Open em Nova York",
     subtitulo: "Grand Slam + Manhattan",
     descricao:
@@ -164,7 +176,7 @@ export const experiencias: Experiencia[] = [
     cor: "from-yellow-900/80",
     conteudo: {
       intro:
-        "O último Grand Slam do ano acontece em Nova York, no USTA Billie Jean King National Tennis Center. É o torneio mais intenso do calendário — noites iluminadas, courts ao ar livre e a cidade que nunca dorme ao fundo.",
+        "O último Grand Slam do ano acontece em Nova York, no USTA Billie Jean King National Tennis Center. É o torneio mais intenso do calendário, noites iluminadas, courts ao ar livre e a cidade que nunca dorme ao fundo.",
       topicos: [
         {
           titulo: "O torneio mais aberto do Grand Slam",
@@ -174,7 +186,7 @@ export const experiencias: Experiencia[] = [
         {
           titulo: "Nova York como destino",
           texto:
-            "Central Park, Times Square, Brooklyn, gastronomia de alto nível — Nova York é um destino completo. A Blue Panda combina o melhor do US Open com a melhor experiência na cidade.",
+            "Central Park, Times Square, Brooklyn, gastronomia de alto nível. Nova York é um destino completo. A Blue Panda combina o melhor do US Open com a melhor experiência na cidade.",
         },
         {
           titulo: "A experiência Blue Panda",
@@ -189,6 +201,8 @@ export const experiencias: Experiencia[] = [
   {
     slug: "nba",
     categoria: "NBA",
+    tituloParte1: "As Finais",
+    tituloParte2: "da NBA",
     titulo: "As Finais da NBA",
     subtitulo: "A maior liga de basquete do mundo",
     descricao:
@@ -198,17 +212,17 @@ export const experiencias: Experiencia[] = [
     cor: "from-purple-900/80",
     conteudo: {
       intro:
-        "As Finais da NBA são o ápice do basquete mundial. Uma série de até 7 jogos entre os dois melhores times da temporada, com cada partida podendo ser a última — ou o começo de uma virada histórica.",
+        "As Finais da NBA são o ápice do basquete mundial. Uma série de até 7 jogos entre os dois melhores times da temporada, com cada partida podendo ser a última ou o começo de uma virada histórica.",
       topicos: [
         {
           titulo: "A atmosfera de uma Final",
           texto:
-            "Os courts da NBA têm uma energia diferente de qualquer outro esporte. A proximidade com os jogadores, o barulho do parquet, os time-outs estratégicos — tudo cria uma experiência única.",
+            "Os courts da NBA têm uma energia diferente de qualquer outro esporte. A proximidade com os jogadores, o barulho do parquet, os time-outs estratégicos, tudo cria uma experiência única.",
         },
         {
           titulo: "Os maiores atletas do mundo",
           texto:
-            "LeBron, Curry, Giannis, Luka — as Finais reúnem os melhores do mundo no mesmo palco. É história acontecendo em tempo real.",
+            "LeBron, Curry, Giannis, Luka. As Finais reúnem os melhores do mundo no mesmo palco. É história acontecendo em tempo real.",
         },
         {
           titulo: "A experiência Blue Panda",

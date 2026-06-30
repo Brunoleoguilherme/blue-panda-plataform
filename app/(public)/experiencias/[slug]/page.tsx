@@ -38,7 +38,7 @@ export default async function ExperienciaPage({ params }: Props) {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-end overflow-hidden">
+      <section className="relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src={exp.imagem}
@@ -52,10 +52,10 @@ export default async function ExperienciaPage({ params }: Props) {
           <div className="absolute inset-0 bg-gradient-to-r from-midnight/80 via-midnight/30 to-transparent" />
         </div>
 
-        <div className="container-bp relative z-10 pb-16 pt-36 w-full">
+        <div className="container-bp relative z-10 pt-36 pb-16 w-full">
           <Link
             href="/experiencias"
-            className="inline-flex items-center gap-2 text-xs text-white/40 hover:text-gold transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-xs text-white/40 hover:text-gold transition-colors mb-6"
           >
             <ArrowLeft size={14} /> Todas as experiências
           </Link>
@@ -64,10 +64,12 @@ export default async function ExperienciaPage({ params }: Props) {
             {exp.categoria}
           </span>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight max-w-3xl">
-            {exp.titulo}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-3xl mb-3">
+            {exp.tituloParte1}
+            <br />
+            {exp.tituloParte2}
           </h1>
-          <p className="text-lg text-gold/70 font-semibold mb-4">{exp.subtitulo}</p>
+          <p className="text-lg text-gold/70 font-semibold mb-3">{exp.subtitulo}</p>
           <p className="text-white/60 max-w-xl leading-relaxed">{exp.descricao}</p>
         </div>
       </section>

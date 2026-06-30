@@ -28,12 +28,12 @@ const faqs = [
   {
     pergunta: "Preciso de visto para viajar?",
     resposta:
-      "Depende do destino. Nossa equipe orienta sobre toda a documentação necessária — passaporte, visto, ESTA — e acompanha o processo para garantir que tudo esteja em ordem antes da viagem.",
+      "Depende do destino. Nossa equipe orienta sobre toda a documentação necessária,passaporte, visto, ESTA,e acompanha o processo para garantir que tudo esteja em ordem antes da viagem.",
   },
   {
     pergunta: "Posso personalizar o pacote?",
     resposta:
-      "Sim. Cada pacote pode ser adaptado às suas necessidades — número de dias, categoria de hotel, experiências adicionais, upgrade de ingresso, passeios extras e muito mais.",
+      "Sim. Cada pacote pode ser adaptado às suas necessidades,número de dias, categoria de hotel, experiências adicionais, upgrade de ingresso, passeios extras e muito mais.",
   },
 ];
 
