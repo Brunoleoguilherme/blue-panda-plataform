@@ -58,7 +58,7 @@ export const destinos: Destino[] = [
     bandeira: "🇲🇨",
     descricao:
       "O principado mais glamouroso da Europa é palco do Grand Prix mais icônico da Fórmula 1. Uma experiência que une esporte, luxo e exclusividade.",
-    imagem: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop",
+    imagem: "https://images.unsplash.com/photo-1585208798174-6cedd86e019a?q=80&w=800&auto=format&fit=crop",
     eventos: 1,
     destaques: ["F1 Grand Prix", "Iate Club", "Cassino de Monte Carlo"],
     continente: "europa",

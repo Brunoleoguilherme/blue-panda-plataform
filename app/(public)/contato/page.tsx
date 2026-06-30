@@ -12,7 +12,7 @@ export default function ContatoPage() {
   return (
     <>
       {/* Hero */}
-      <div className="pt-28 sm:pt-36 pb-10 sm:pb-16 relative overflow-hidden">
+      <div className="pt-40 sm:pt-52 pb-10 sm:pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/images/hero-contato.jpg')" }} />
         <div className="absolute inset-0 bg-midnight/80" />

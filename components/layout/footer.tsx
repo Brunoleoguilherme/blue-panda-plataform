@@ -49,7 +49,7 @@ export function Footer() {
               alt="Blue Panda Travel"
               width={200}
               height={70}
-              className="h-28 w-auto object-contain mb-6"
+              className="h-56 w-auto object-contain mb-6"
             />
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
               Plataforma premium de experiências esportivas internacionais.

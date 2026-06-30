@@ -20,8 +20,7 @@ export default function BlogPage() {
           </p>
           <h1 className="text-3xl sm:text-5xl font-bold text-white mb-4">Blog</h1>
           <p className="text-white/50 text-lg max-w-xl">
-            Guias, dicas, relatos e tudo que você precisa saber para viver
-            experiências esportivas inesquecíveis.
+            Bastidores, perspectivas, informações e notícias para quem entende que a experiência começa muito antes do evento. Se prepare para ficar por dentro de tudo dos maiores eventos esportivos do mundo.
           </p>
         </div>
       </div>
