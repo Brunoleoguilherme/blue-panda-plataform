@@ -13,7 +13,7 @@ const experiencias = [
     categoria: "NFL",
     titulo: "Como é viver um Super Bowl",
     descricao:
-      "O maior espetáculo do entretenimento mundial. Não é apenas um jogo,é uma semana inteira de emoções, shows, festas e cultura americana na sua forma mais intensa.",
+      "O maior espetáculo do entretenimento mundial. Não é apenas um jogo, é uma semana inteira de emoções, shows, festas e cultura americana na sua forma mais intensa.",
     imagem: "/images/hero-superbowl.jpg",
     destaque: "Experiência completa de 7 dias",
     cor: "from-blue-900/80",
