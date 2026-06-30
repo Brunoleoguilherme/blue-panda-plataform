@@ -7,9 +7,9 @@ import { ArrowRight, Play, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const upcoming = [
-  { label: "NFL Brasil", local: "Rio de Janeiro" },
-  { label: "F1 Monaco", local: "Monte Carlo" },
-  { label: "NFL Brasil 2026", local: "Rio de Janeiro" },
+  { label: "Super Bowl LXI", local: "Los Angeles" },
+  { label: "F1 Grand Prix Monaco", local: "Monte Carlo" },
+  { label: "Brasil Flag World Championship", local: "Brasil" },
 ];
 
 export function Hero() {
