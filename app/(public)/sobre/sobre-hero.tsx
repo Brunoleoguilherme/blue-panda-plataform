@@ -32,13 +32,13 @@ export function SobreHero() {
             Quem somos
           </p>
           <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-bold text-white leading-tight mb-6">
-            Não somos uma agência
+            Uma agência especializada em eventos
             <br />
-            <span className="text-gold-gradient">de viagens.</span>
+            <span className="text-gold-gradient">e experiências esportivas premium.</span>
           </h1>
           <p className="text-white/60 text-xl font-serif italic leading-relaxed">
-            Somos uma plataforma de experiências esportivas premium.
-            Cada decisão que tomamos reforça essa percepção.
+            Somos a curadoria que transforma o acesso a grandes eventos esportivos em memória definitiva.
+            Cuidamos de cada detalhe para que você só precise viver o momento.
           </p>
         </motion.div>
       </div>
