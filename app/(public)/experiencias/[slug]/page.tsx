@@ -52,10 +52,10 @@ export default async function ExperienciaPage({ params }: Props) {
           <div className="absolute inset-0 bg-gradient-to-r from-midnight/80 via-midnight/30 to-transparent" />
         </div>
 
-        <div className="container-bp relative z-10 pt-36 pb-16 w-full">
+        <div className="container-bp relative z-10 pt-44 pb-10 w-full">
           <Link
             href="/experiencias"
-            className="inline-flex items-center gap-2 text-xs text-white/40 hover:text-gold transition-colors mb-6"
+            className="inline-flex items-center gap-2 text-xs text-white/40 hover:text-gold transition-colors mb-5"
           >
             <ArrowLeft size={14} /> Todas as experiências
           </Link>
@@ -75,7 +75,7 @@ export default async function ExperienciaPage({ params }: Props) {
       </section>
 
       {/* Conteúdo */}
-      <section className="section bg-midnight">
+      <section className="py-10 md:py-14 bg-midnight">
         <div className="container-bp">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main content */}
