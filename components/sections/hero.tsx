@@ -8,8 +8,8 @@ import { Button } from "@/components/ui/button";
 
 const upcoming = [
   { label: "Super Bowl LXI", local: "Los Angeles" },
-  { label: "F1 Grand Prix Monaco", local: "Monte Carlo" },
-  { label: "Brasil Flag World Championship", local: "Brasil" },
+  { label: "F1 Grand Prix de Monaco", local: "Monte Carlo" },
+  { label: "Flag World Championship", local: "Brasil" },
 ];
 
 export function Hero() {
@@ -102,7 +102,7 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="hidden lg:flex flex-col justify-end items-end h-full pb-4"
             >
-              <div className="w-72 rounded-2xl border border-white/10 bg-midnight/60 backdrop-blur-xl p-5 space-y-3">
+              <div className="w-80 rounded-2xl border border-white/10 bg-midnight/60 backdrop-blur-xl p-5 space-y-3">
                 <p className="text-[10px] font-bold text-white/30 uppercase tracking-widest mb-4">
                   Próximas experiências
                 </p>
@@ -112,10 +112,10 @@ export function Hero() {
                     initial={{ opacity: 0, x: 12 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.7 + i * 0.1 }}
-                    className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/5 hover:border-gold/20 transition-colors cursor-pointer"
+                    className="flex items-center justify-between gap-3 p-3 rounded-xl bg-white/5 border border-white/5 hover:border-gold/20 transition-colors cursor-pointer"
                   >
-                    <span className="text-sm font-semibold text-white">{ev.label}</span>
-                    <span className="flex items-center gap-1 text-xs text-gold/70">
+                    <span className="text-sm font-semibold text-white whitespace-nowrap">{ev.label}</span>
+                    <span className="flex items-center gap-1 text-xs text-gold/70 whitespace-nowrap flex-shrink-0">
                       <MapPin size={11} /> {ev.local}
                     </span>
                   </motion.div>

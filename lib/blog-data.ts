@@ -140,7 +140,7 @@ export const posts: Post[] = [
       <p>Nossos pacotes incluem ingressos em áreas premium, hotel boutique em Budapeste, transfer ao estádio e suporte de um especialista bilíngue durante toda a experiência. Entre em contato e garanta seu lugar na final.</p>
     `,
     categoria: "experiencias",
-    imagem: "/images/hero-champions.jpg",
+    imagem: "/images/blog-champions.jpg",
     autor: "Blue Panda",
     autorFoto: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100",
     publicadoEm: "2026-04-18",
