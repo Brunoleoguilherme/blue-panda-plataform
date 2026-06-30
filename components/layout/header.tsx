@@ -103,7 +103,7 @@ export function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="lg:hidden overflow-hidden glass border-t border-gold/10"
+            className="lg:hidden overflow-hidden bg-midnight border-t border-gold/10"
           >
             <nav className="container-bp py-5 flex flex-col">
               {navLinks.map((link, i) => (
