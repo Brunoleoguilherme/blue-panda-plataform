@@ -38,7 +38,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-badge px-4 py-2 mb-10 mt-6"
+                className="inline-flex items-center gap-2 bg-gold/10 border border-gold/30 rounded-badge px-4 py-2 mb-10 mt-20"
               >
                 <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
                 <span className="text-xs font-semibold text-gold tracking-widest uppercase">
