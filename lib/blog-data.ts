@@ -76,7 +76,7 @@ export const posts: Post[] = [
       <p>O fim de semana do GP dura cinco dias. Treinos livres, classificação e o domingo da corrida têm atmosferas completamente diferentes. Aproveite para visitar o Cassino de Monte Carlo, jantar no porto e passear de iate — experiências que a Blue Panda pode incluir no seu pacote personalizado.</p>
     `,
     categoria: "destinos",
-    imagem: "/images/hero-f1.jpg",
+    imagem: "/images/blog-monaco.jpg",
     autor: "Blue Panda",
     autorFoto: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100",
     publicadoEm: "2026-05-20",
@@ -172,7 +172,7 @@ export const posts: Post[] = [
       <p>Em um país desconhecido, com idioma diferente e logística complexa, ter uma equipe de especialistas ao seu lado faz toda a diferença. A Blue Panda acompanha cada cliente com suporte bilíngue, do aeroporto ao estádio e de volta ao hotel. Nenhum detalhe fica para trás.</p>
     `,
     categoria: "dicas",
-    imagem: "/images/hero-experiencias.jpg",
+    imagem: "/images/blog-5dicas.jpg",
     autor: "Blue Panda",
     autorFoto: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100",
     publicadoEm: "2026-03-30",
@@ -201,7 +201,7 @@ export const posts: Post[] = [
       <p>LA é a escolha perfeita para o Super Bowl. Hollywood, praias de Santa Mônica, gastronomia de nível mundial, o clima perfeito em fevereiro. Planeje chegar alguns dias antes para aproveitar a cidade antes que o ritmo do Super Bowl Week tome conta de tudo.</p>
     `,
     categoria: "eventos",
-    imagem: "/images/hero-superbowl.jpg",
+    imagem: "/images/blog-superbowl.jpg",
     autor: "Blue Panda",
     autorFoto: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100",
     publicadoEm: "2026-03-10",
