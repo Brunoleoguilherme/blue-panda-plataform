@@ -3,7 +3,6 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Linkedin, Instagram } from "lucide-react";
 
 const equipe = [
   {
@@ -89,23 +88,6 @@ export function SobreEquipe() {
                 {membro.bio}
               </p>
 
-              {/* Social */}
-              <div className="flex items-center justify-center gap-3">
-                <a
-                  href={membro.linkedin}
-                  className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-gold hover:border-gold/30 transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin size={14} />
-                </a>
-                <a
-                  href={membro.instagram}
-                  className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-gold hover:border-gold/30 transition-colors"
-                  aria-label="Instagram"
-                >
-                  <Instagram size={14} />
-                </a>
-              </div>
             </motion.div>
           ))}
         </div>
