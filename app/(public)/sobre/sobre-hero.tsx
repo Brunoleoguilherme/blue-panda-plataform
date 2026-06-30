@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export function SobreHero() {
   return (
-    <section className="relative min-h-[70vh] flex items-end overflow-hidden">
+    <section className="relative pt-28 sm:pt-40 pb-12 sm:pb-20 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -21,7 +21,7 @@ export function SobreHero() {
         <div className="absolute inset-0 bg-gradient-to-r from-midnight/70 to-transparent" />
       </div>
 
-      <div className="container-bp relative z-10 pb-20 pt-40">
+      <div className="container-bp relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
