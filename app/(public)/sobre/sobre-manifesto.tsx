@@ -23,7 +23,7 @@ const pilares = [
 
 export function SobreManifesto() {
   return (
-    <section className="section bg-[#060f22]">
+    <section className="py-10 md:py-14 bg-[#060f22]">
       <div className="container-bp">
         {/* Manifesto central */}
         <motion.div
