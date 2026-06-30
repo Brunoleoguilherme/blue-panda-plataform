@@ -13,11 +13,10 @@ export function CtaSection() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?q=80&w=2400')",
+          backgroundImage: "url('/images/cta-bg.jpg')",
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-midnight/95 via-midnight/80 to-midnight/95" />
+      <div className="absolute inset-0 bg-midnight/65" />
 
       {/* Gold accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />

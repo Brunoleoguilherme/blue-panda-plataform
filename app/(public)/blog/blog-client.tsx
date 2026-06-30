@@ -45,6 +45,8 @@ export function BlogClient() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     priority
                   />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent to-navy/80 hidden lg:block" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/90 to-transparent lg:hidden" />
                 </div>
 
                 {/* Content */}
@@ -142,6 +144,7 @@ export function BlogClient() {
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
+                        <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent" />
                         <div className="absolute top-3 left-3">
                           <span className="text-xs font-semibold text-white/70 bg-midnight/70 rounded-badge px-2.5 py-1 capitalize">
                             {post.categoria}
