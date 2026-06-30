@@ -55,14 +55,16 @@ export default async function ExperienciaPage({ params }: Props) {
         <div className="container-bp relative z-10 pt-44 pb-10 w-full">
           <Link
             href="/experiencias"
-            className="inline-flex items-center gap-2 text-xs text-white/40 hover:text-gold transition-colors mb-5"
+            className="flex w-fit items-center gap-2 text-xs text-white/40 hover:text-gold transition-colors mb-4"
           >
             <ArrowLeft size={14} /> Todas as experiências
           </Link>
 
-          <span className="inline-block text-xs font-semibold text-gold/80 uppercase tracking-widest mb-4 bg-gold/10 border border-gold/20 rounded-badge px-3 py-1">
-            {exp.categoria}
-          </span>
+          <div className="mb-4">
+            <span className="inline-block text-xs font-semibold text-gold/80 uppercase tracking-widest bg-gold/10 border border-gold/20 rounded-badge px-3 py-1">
+              {exp.categoria}
+            </span>
+          </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-3xl mb-3">
             {exp.tituloParte1}
