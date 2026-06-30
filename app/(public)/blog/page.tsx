@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
-      <div className="relative pt-28 sm:pt-36 pb-10 sm:pb-16 overflow-hidden">
+      <div className="relative pt-40 sm:pt-52 pb-20 sm:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/images/hero-blog.jpg')" }} />
         <div className="absolute inset-0 bg-midnight/80" />
