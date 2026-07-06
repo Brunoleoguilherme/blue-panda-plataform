@@ -7,7 +7,11 @@ export const dynamic = "force-dynamic";
 
 // Enquanto bluepandatravel.com.br não estiver verificado no Resend, use um domínio verificado via EMAIL_FROM
 const FROM = process.env.EMAIL_FROM ?? "Blue Panda Travel <news@brasilsportsbusiness.com>";
-const TO = process.env.DAILY_NEWS_TO ?? "agenciazebrapubli@gmail.com";
+// Aceita múltiplos destinatários separados por vírgula
+const TO = (process.env.DAILY_NEWS_TO ?? "agenciazebrapubli@gmail.com,brunoleoguilherme@gmail.com")
+  .split(",")
+  .map((e) => e.trim())
+  .filter(Boolean);
 
 export async function GET(request: NextRequest) {
   // Segurança: valida o header enviado pelo cron da Vercel
@@ -39,16 +43,16 @@ export async function GET(request: NextRequest) {
   if (!data) {
     await resend.emails.send({
       from: FROM,
-      to: [TO],
+      to: TO,
       subject: `⚠️ Banco de Notícias — atualização de ${today} não encontrada`,
-      html: `<p style="font-family:sans-serif;font-size:14px;">A atualização diária do Banco de Notícias para <strong>${today}</strong> não foi encontrada no banco de dados até o horário do envio (08:00 BRT). Verifique se a automação das 07:05 rodou corretamente.</p>`,
+      html: `<p style="font-family:sans-serif;font-size:14px;">A atualização diária do Banco de Notícias para <strong>${today}</strong> não foi encontrada no banco de dados até o horário do envio (08:00 BRT). Verifique se o cron de coleta das 07:15 rodou corretamente.</p>`,
     });
     return NextResponse.json({ sent: false, reason: "no-content", date: today });
   }
 
   const { error: sendError } = await resend.emails.send({
     from: FROM,
-    to: [TO],
+    to: TO,
     subject: `Banco de Notícias Premium — ${today}`,
     html: dailyNewsToEmailHtml(today, data.content_md),
   });
