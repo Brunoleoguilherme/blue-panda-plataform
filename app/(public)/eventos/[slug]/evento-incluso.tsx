@@ -22,7 +22,7 @@ const inclusos = [
   {
     icon: Hotel,
     titulo: "Hotel premium",
-    descricao: "Hospedagem selecionada próxima ao evento com café da manhã incluso.",
+    descricao: "Hospedagem selecionada próxima ao evento, curada conforme o seu perfil.",
   },
   {
     icon: Car,
@@ -68,14 +68,14 @@ export function EventoIncluso() {
           className="text-center max-w-2xl mx-auto mb-14"
         >
           <p className="text-xs font-semibold text-gold uppercase tracking-widest mb-3">
-            Pacote completo
+            Experiências personalizadas
           </p>
           <h2 className="text-4xl font-bold text-white mb-4">
-            O que está incluso
+            O que podemos organizar para você
           </h2>
           <p className="text-white/50 leading-relaxed">
-            Cuidamos de cada detalhe para que você cuide apenas de viver o
-            momento. Nada de surpresas. Nada de improviso.
+            Cada experiência é montada sob medida. Cuidamos de cada detalhe
+            para que você cuide apenas de viver o momento.
           </p>
         </motion.div>
 

@@ -16,7 +16,7 @@ const etapas = [
     icon: Hotel,
     dia: "Dia 2",
     titulo: "Exploração",
-    descricao: "Café da manhã incluso. Tempo livre para explorar a cidade no seu ritmo.",
+    descricao: "Tempo livre para explorar a cidade no seu ritmo. Roteiro e indicações da Blue Panda.",
   },
   {
     icon: Ticket,
