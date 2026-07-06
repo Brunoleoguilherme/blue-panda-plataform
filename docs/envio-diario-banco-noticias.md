@@ -25,8 +25,8 @@ Máximo de 5 itens por seção, com deduplicação de títulos entre seções.
 - [x] `vercel.json` com os 2 crons (limite do plano Hobby da Vercel = 2 crons diários, exatamente o que usamos)
 - [x] Tarefa Claude `banco-noticias-diario` desativada (substituída pela coleta na nuvem)
 - [ ] Remover a tarefa do Windows, se registrada: `schtasks /Delete /TN BluePanda-UploadDailyNews /F`
-- [ ] DNS do `bluepandatravel.com.br` no Resend: na página de domínios do Resend, usar "Go to Hostinger" ou adicionar os registros DKIM/SPF/MX manualmente. Enquanto não verificar, o remetente é `news@brasilsportsbusiness.com` (`EMAIL_FROM` no `.env.local`/Vercel); depois trocar para `contato@bluepandatravel.com.br`.
-- [ ] Deploy na Vercel com env vars: `RESEND_API_KEY`, `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `CRON_SECRET` (gerar valor aleatório), `EMAIL_FROM`, `DAILY_NEWS_TO` (opcional). O `vercel.json` já registra os crons.
+- [ ] DNS do `bluepandatravel.com.br` no Resend (DKIM/SPF/MX); enquanto não verificar, o remetente é `news@brasilsportsbusiness.com` (`EMAIL_FROM`); depois trocar para `contato@bluepandatravel.com.br`.
+- [ ] Env vars na Vercel: `RESEND_API_KEY`, `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `CRON_SECRET`, `EMAIL_FROM`, `DAILY_NEWS_TO` (opcional).
 
 ## Teste manual (após deploy)
 
@@ -42,4 +42,6 @@ Conferir a linha na tabela `daily_news` (Supabase → Table Editor) e o e-mail e
 - `app/api/fetch-daily-news/route.ts` — coleta via Google News RSS (cron 10:15 UTC)
 - `app/api/send-daily-news/route.ts` — envio do e-mail (cron 11:00 UTC)
 - `lib/daily-news.ts` — fuso de São Paulo + conversão markdown→HTML
-- `supabase/migrations/20
+- `supabase/migrations/20260706120000_create_daily_news.sql` — tabela (já aplicada)
+- `vercel.json` — crons da Vercel
+- `scripts/upload-daily-news.*` — **obsoletos** (fluxo antigo dependente do Windows); podem ser removidos
