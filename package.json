@@ -31,7 +31,8 @@
     "resend": "^6.16.0",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.23.8"
+    "zod": "^3.23.8",
+    "@vercel/analytics": "^2.0.1"
   },
   "devDependencies": {
     "@types/node": "^22.10.1",

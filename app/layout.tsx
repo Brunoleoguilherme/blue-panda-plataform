@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter, Libre_Baskerville } from "next/font/google";
@@ -58,7 +59,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${libreBaskerville.variable}`}>
-      <body>{children}</body>
+      <body>{children}  <Analytics />
+      </body>
     </html>
   );
 }
