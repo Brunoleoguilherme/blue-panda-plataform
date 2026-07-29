@@ -15,6 +15,15 @@ export default async function ClienteLayout({
 
   if (!user) redirect("/login");
 
+  // Só entra quem já foi aprovado (profiles.active = true).
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("active")
+    .eq("id", user.id)
+    .maybeSingle();
+
+  if (!profile?.active) redirect("/login?status=pendente");
+
   return (
     <div className="min-h-screen bg-[#060f22] flex">
       <ClienteSidebar />

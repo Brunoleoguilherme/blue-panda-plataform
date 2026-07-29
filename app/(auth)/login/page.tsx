@@ -33,7 +33,7 @@ export default function LoginPage() {
         </div>
 
         {/* Dois cards: Cliente e Administrativo */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-stretch">
           {/* Card Cliente */}
           <div className="rounded-2xl border border-white/10 bg-midnight/80 backdrop-blur-xl shadow-2xl px-7 py-8 flex flex-col">
             <div className="mb-6">

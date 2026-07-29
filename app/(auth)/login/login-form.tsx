@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -45,16 +46,24 @@ export function LoginForm({ variant = "cliente" }: { variant?: LoginVariant }) {
     });
 
     if (authError) {
-      setError("E-mail ou senha incorretos. Tente novamente.");
+      const msg = authError.message?.toLowerCase() ?? "";
+      if (msg.includes("not confirmed")) {
+        setError(
+          "Seu e-mail ainda não foi confirmado. Verifique sua caixa de entrada."
+        );
+      } else {
+        setError("E-mail ou senha incorretos. Tente novamente.");
+      }
       setLoading(false);
       return;
     }
 
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
     if (isAdmin) {
       // Confirma o papel administrativo antes de liberar o painel.
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
       const role =
         (user?.app_metadata as { role?: string } | undefined)?.role ??
         (user?.user_metadata as { role?: string } | undefined)?.role;
@@ -71,12 +80,32 @@ export function LoginForm({ variant = "cliente" }: { variant?: LoginVariant }) {
       return;
     }
 
+    // Área do cliente: confirma que a conta já foi aprovada (active = true).
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("active")
+      .eq("id", user?.id ?? "")
+      .maybeSingle();
+
+    if (!profile?.active) {
+      await supabase.auth.signOut();
+      setError(
+        "Sua conta ainda está aguardando aprovação de um administrador."
+      );
+      setLoading(false);
+      return;
+    }
+
     router.push("/cliente");
     router.refresh();
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} noValidate className="space-y-4">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      noValidate
+      className="flex flex-1 flex-col space-y-4"
+    >
       {/* Email */}
       <div className="space-y-1.5">
         <label className="text-xs font-semibold text-white/50 uppercase tracking-widest">
@@ -142,18 +171,6 @@ export function LoginForm({ variant = "cliente" }: { variant?: LoginVariant }) {
         )}
       </div>
 
-      {/* Forgot password — apenas na área do cliente */}
-      {!isAdmin && (
-        <div className="flex justify-end">
-          <a
-            href="/contato"
-            className="text-xs text-white/35 hover:text-gold transition-colors"
-          >
-            Esqueci minha senha
-          </a>
-        </div>
-      )}
-
       {/* Error */}
       <AnimatePresence>
         {error && (
@@ -168,19 +185,45 @@ export function LoginForm({ variant = "cliente" }: { variant?: LoginVariant }) {
         )}
       </AnimatePresence>
 
-      <Button
-        type="submit"
-        variant="primary"
-        size="lg"
-        loading={loading}
-        className="w-full"
-      >
-        {loading
-          ? "Entrando..."
-          : isAdmin
-            ? "Entrar no painel"
-            : "Entrar"}
-      </Button>
+      {/* Rodapé fixo na base do card, para os botões dos dois cards ficarem alinhados */}
+      <div className="mt-auto pt-2">
+        {isAdmin ? (
+          <p className="text-xs text-white/30 mb-3 h-4 leading-4">
+            Acesso exclusivo da equipe.
+          </p>
+        ) : (
+          <div className="flex justify-end mb-3 h-4 leading-4">
+            <a
+              href="/contato"
+              className="text-xs text-white/35 hover:text-gold transition-colors"
+            >
+              Esqueci minha senha
+            </a>
+          </div>
+        )}
+
+        <Button
+          type="submit"
+          variant="primary"
+          size="lg"
+          loading={loading}
+          className="w-full"
+        >
+          {loading ? "Entrando..." : isAdmin ? "Entrar no painel" : "Entrar"}
+        </Button>
+
+        {!isAdmin && (
+          <p className="text-center text-sm text-white/35 mt-4">
+            Não tem conta?{" "}
+            <Link
+              href="/cadastro"
+              className="text-gold hover:text-gold-light transition-colors font-semibold"
+            >
+              Cadastre-se
+            </Link>
+          </p>
+        )}
+      </div>
     </form>
   );
 }
