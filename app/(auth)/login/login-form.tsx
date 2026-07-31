@@ -185,22 +185,16 @@ export function LoginForm({ variant = "cliente" }: { variant?: LoginVariant }) {
         )}
       </AnimatePresence>
 
-      {/* Rodapé fixo na base do card, para os botões dos dois cards ficarem alinhados */}
+      {/* Rodapé do card */}
       <div className="mt-auto pt-2">
-        {isAdmin ? (
-          <p className="text-xs text-white/30 mb-3 h-4 leading-4">
-            Acesso exclusivo da equipe.
-          </p>
-        ) : (
-          <div className="flex justify-end mb-3 h-4 leading-4">
-            <a
-              href="/recuperar-senha"
-              className="text-xs text-white/35 hover:text-gold transition-colors"
-            >
-              Esqueci minha senha
-            </a>
-          </div>
-        )}
+        <div className="flex justify-end mb-3 h-4 leading-4">
+          <a
+            href="/recuperar-senha"
+            className="text-xs text-white/35 hover:text-gold transition-colors"
+          >
+            Esqueci minha senha
+          </a>
+        </div>
 
         <Button
           type="submit"
@@ -212,17 +206,15 @@ export function LoginForm({ variant = "cliente" }: { variant?: LoginVariant }) {
           {loading ? "Entrando..." : isAdmin ? "Entrar no painel" : "Entrar"}
         </Button>
 
-        {!isAdmin && (
-          <p className="text-center text-sm text-white/35 mt-4">
-            Não tem conta?{" "}
-            <Link
-              href="/cadastro"
-              className="text-gold hover:text-gold-light transition-colors font-semibold"
-            >
-              Cadastre-se
-            </Link>
-          </p>
-        )}
+        <p className="text-center text-sm text-white/35 mt-4">
+          Não tem conta?{" "}
+          <Link
+            href="/cadastro"
+            className="text-gold hover:text-gold-light transition-colors font-semibold"
+          >
+            Cadastre-se
+          </Link>
+        </p>
       </div>
     </form>
   );

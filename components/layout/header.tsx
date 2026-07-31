@@ -66,9 +66,12 @@ export function Header() {
         </nav>
 
         {/* Desktop Actions */}
-        <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
+        <div className="hidden lg:flex items-center gap-2 flex-shrink-0">
           <Link href="/login">
-            <Button variant="ghost" size="sm">Login</Button>
+            <Button variant="ghost" size="sm">Área do Cliente</Button>
+          </Link>
+          <Link href="/login?area=equipe">
+            <Button variant="ghost" size="sm">Área da Equipe</Button>
           </Link>
           <Link href="/contato">
             <Button variant="primary" size="sm">Planejar Experiência</Button>
@@ -126,7 +129,10 @@ export function Header() {
               ))}
               <div className="flex flex-col gap-3 pt-4">
                 <Link href="/login">
-                  <Button variant="outline" size="md" className="w-full">Login</Button>
+                  <Button variant="outline" size="md" className="w-full">Área do Cliente</Button>
+                </Link>
+                <Link href="/login?area=equipe">
+                  <Button variant="outline" size="md" className="w-full">Área da Equipe</Button>
                 </Link>
                 <Link href="/contato">
                   <Button variant="primary" size="md" className="w-full">Planejar Experiência</Button>
