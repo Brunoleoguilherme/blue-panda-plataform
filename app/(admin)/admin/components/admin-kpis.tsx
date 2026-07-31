@@ -1,13 +1,48 @@
 import { Users, CalendarDays, TrendingUp, BookOpen } from "lucide-react";
+import { formatBRL } from "@/lib/reservas";
 
-const kpis = [
-  { icon: Users, label: "Total de Clientes", color: "text-blue-400", bg: "bg-blue-500/10 border-blue-500/15" },
-  { icon: CalendarDays, label: "Eventos Ativos", color: "text-gold", bg: "bg-gold/10 border-gold/15" },
-  { icon: BookOpen, label: "Reservas Abertas", color: "text-purple-400", bg: "bg-purple-500/10 border-purple-500/15" },
-  { icon: TrendingUp, label: "Receita (mês)", color: "text-green-400", bg: "bg-green-500/10 border-green-500/15" },
-];
+export function AdminKpis({
+  clientes,
+  eventosAtivos,
+  reservasAbertas,
+  recebido,
+}: {
+  clientes: number;
+  eventosAtivos: number;
+  reservasAbertas: number;
+  recebido: number;
+}) {
+  const kpis = [
+    {
+      icon: Users,
+      label: "Total de Clientes",
+      color: "text-blue-400",
+      bg: "bg-blue-500/10 border-blue-500/15",
+      value: String(clientes),
+    },
+    {
+      icon: CalendarDays,
+      label: "Eventos Ativos",
+      color: "text-gold",
+      bg: "bg-gold/10 border-gold/15",
+      value: String(eventosAtivos),
+    },
+    {
+      icon: BookOpen,
+      label: "Reservas Abertas",
+      color: "text-purple-400",
+      bg: "bg-purple-500/10 border-purple-500/15",
+      value: String(reservasAbertas),
+    },
+    {
+      icon: TrendingUp,
+      label: "Recebido",
+      color: "text-green-400",
+      bg: "bg-green-500/10 border-green-500/15",
+      value: formatBRL(recebido),
+    },
+  ];
 
-export function AdminKpis() {
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
       {kpis.map((kpi) => (
@@ -15,9 +50,8 @@ export function AdminKpis() {
           <div className="flex items-center justify-between mb-3">
             <kpi.icon size={16} className={kpi.color} />
           </div>
-          <p className="text-2xl font-bold text-white/30">—</p>
+          <p className="text-2xl font-bold text-white">{kpi.value}</p>
           <p className="text-xs text-white/40 mt-0.5">{kpi.label}</p>
-          <p className="text-[11px] text-white/20 mt-1">Sem dados ainda</p>
         </div>
       ))}
     </div>
