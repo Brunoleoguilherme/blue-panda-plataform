@@ -6,20 +6,21 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Calendar, Search, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { events, categories, statusConfig } from "@/lib/events-data";
-import type { EventCategory } from "@/types";
+import { categories, statusConfig } from "@/lib/events-data";
+import type { Event, EventCategory } from "@/types";
 import { cn } from "@/lib/utils";
 
 type FilterCategory = EventCategory | "todos";
 
 function formatDate(dateStr: string): string {
+  if (!dateStr) return "";
   return new Date(dateStr).toLocaleDateString("pt-BR", {
     month: "long",
     year: "numeric",
   });
 }
 
-export function EventsClient() {
+export function EventsClient({ events }: { events: Event[] }) {
   const [activeCategory, setActiveCategory] = useState<FilterCategory>("todos");
   const [search, setSearch] = useState("");
 
@@ -33,7 +34,7 @@ export function EventsClient() {
         e.country.toLowerCase().includes(search.toLowerCase());
       return matchCat && matchSearch;
     });
-  }, [activeCategory, search]);
+  }, [events, activeCategory, search]);
 
   return (
     <section className="section bg-midnight">

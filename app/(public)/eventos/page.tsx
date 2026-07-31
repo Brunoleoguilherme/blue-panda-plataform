@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
 import { EventsClient } from "./events-client";
+import { getPublishedEvents } from "@/lib/events";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Eventos",
   description:
     "Explore todos os eventos esportivos premium disponíveis. NFL, Fórmula 1, Champions League, NBA e muito mais.",
+  alternates: { canonical: "https://www.bluepandatravel.com.br/eventos" },
 };
 
-export default function EventsPage() {
+export default async function EventsPage() {
+  const events = await getPublishedEvents();
+
   return (
     <>
       {/* Page Header */}
@@ -28,7 +34,7 @@ export default function EventsPage() {
         </div>
       </div>
 
-      <EventsClient />
+      <EventsClient events={events} />
     </>
   );
 }
