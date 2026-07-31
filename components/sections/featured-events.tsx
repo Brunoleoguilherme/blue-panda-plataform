@@ -7,61 +7,38 @@ import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import type { Event } from "@/types";
 
-const events = [
-  {
-    id: "1",
-    slug: "nfl-brasil-2026",
-    title: "NFL Brasil 2026",
-    subtitle: "Baltimore Ravens vs Dallas Cowboys",
-    date: "Set 2026",
-    location: "Rio de Janeiro, Brasil",
-    image: "/images/hero-nfl.jpg",
-    status: "open" as const,
-    category: "NFL",
-  },
-  {
-    id: "2",
-    slug: "formula1-monaco-2026",
-    title: "F1 Mônaco 2026",
-    subtitle: "Grand Prix de Monaco",
-    date: "7 Jun 2026",
-    location: "Monte Carlo, Monaco",
-    image: "/images/hero-f1.jpg",
-    status: "open" as const,
-    category: "F1",
-  },
-  {
-    id: "3",
-    slug: "champions-league-final-2026",
-    title: "Champions League Final",
-    subtitle: "PSG x Arsenal · Puskás Aréna",
-    date: "30 Mai 2026",
-    location: "Budapeste, Hungria",
-    image: "/images/hero-champions.jpg",
-    status: "soon" as const,
-    category: "Futebol",
-  },
-  {
-    id: "4",
-    slug: "super-bowl-lxi",
-    title: "Super Bowl LXI",
-    subtitle: "The Biggest Game on Earth",
-    date: "Fev 2027",
-    location: "Los Angeles, EUA",
-    image: "/images/hero-superbowl.jpg",
-    status: "soon" as const,
-    category: "NFL",
-  },
-];
-
-const statusConfig = {
-  open: { label: "Vagas abertas", variant: "gold" as const },
-  sold: { label: "Esgotado", variant: "sold" as const },
-  soon: { label: "Em breve", variant: "navy" as const },
+const statusConfig: Record<
+  Event["status"],
+  { label: string; variant: "gold" | "sold" | "navy" }
+> = {
+  open: { label: "Vagas abertas", variant: "gold" },
+  soldout: { label: "Esgotado", variant: "sold" },
+  soon: { label: "Em breve", variant: "navy" },
 };
 
-export function FeaturedEvents() {
+const categoryLabel: Record<Event["category"], string> = {
+  futebol: "Futebol",
+  formula1: "F1",
+  nfl: "NFL",
+  nba: "NBA",
+  tenis: "Tênis",
+  flag: "Flag Football",
+  outros: "Experiência",
+};
+
+function formatDate(dateStr: string): string {
+  if (!dateStr) return "";
+  return new Date(dateStr + "T00:00:00").toLocaleDateString("pt-BR", {
+    month: "short",
+    year: "numeric",
+  });
+}
+
+export function FeaturedEvents({ events }: { events: Event[] }) {
+  if (!events || events.length === 0) return null;
+
   return (
     <section className="section">
       <div className="container-bp">
@@ -107,7 +84,7 @@ export function FeaturedEvents() {
                   {/* Image */}
                   <div className="relative h-56 sm:h-64 overflow-hidden">
                     <Image
-                      src={event.image}
+                      src={event.coverImage}
                       alt={event.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -122,7 +99,7 @@ export function FeaturedEvents() {
                       </Badge>
                     </div>
                     <div className="absolute top-4 right-4">
-                      <Badge variant="navy">{event.category}</Badge>
+                      <Badge variant="navy">{categoryLabel[event.category]}</Badge>
                     </div>
                   </div>
 
@@ -137,11 +114,12 @@ export function FeaturedEvents() {
                     <div className="flex items-center gap-4 text-xs text-white/40">
                       <span className="flex items-center gap-1.5">
                         <Calendar size={12} />
-                        {event.date}
+                        {formatDate(event.date)}
                       </span>
                       <span className="flex items-center gap-1.5">
                         <MapPin size={12} />
                         {event.location}
+                        {event.country ? `, ${event.country}` : ""}
                       </span>
                     </div>
                   </div>
