@@ -31,7 +31,7 @@ export function ClienteHeader({ user }: Props) {
       <div className="flex items-center gap-2">
         {/* WhatsApp concierge */}
         <a
-          href="https://wa.me/5511999999999"
+          href="https://wa.me/5511940440078"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 h-9 px-3 rounded-btn bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-semibold hover:bg-green-500/20 transition-colors"

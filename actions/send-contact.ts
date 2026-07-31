@@ -84,7 +84,7 @@ export async function sendContactEmail(data: ContactData) {
           <p style="color: rgba(255,255,255,0.7); line-height: 1.7; margin: 0 0 32px;">
             Enquanto isso, você pode nos chamar diretamente pelo WhatsApp para uma resposta ainda mais rápida.
           </p>
-          <a href="https://wa.me/5511999999999" style="display: inline-block; background: linear-gradient(135deg, #C8A54D, #DDBB67); color: #081A3A; font-weight: 700; padding: 14px 28px; border-radius: 14px; text-decoration: none; font-size: 14px;">
+          <a href="https://wa.me/5511940440078" style="display: inline-block; background: linear-gradient(135deg, #C8A54D, #DDBB67); color: #081A3A; font-weight: 700; padding: 14px 28px; border-radius: 14px; text-decoration: none; font-size: 14px;">
             Falar pelo WhatsApp
           </a>
           <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(200,165,77,0.2);">

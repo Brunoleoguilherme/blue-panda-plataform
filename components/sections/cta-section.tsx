@@ -53,7 +53,7 @@ export function CtaSection() {
               </Button>
             </Link>
             <a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5511940440078"
               target="_blank"
               rel="noopener noreferrer"
             >

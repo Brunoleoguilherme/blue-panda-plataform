@@ -194,7 +194,7 @@ export function LoginForm({ variant = "cliente" }: { variant?: LoginVariant }) {
         ) : (
           <div className="flex justify-end mb-3 h-4 leading-4">
             <a
-              href="/contato"
+              href="/recuperar-senha"
               className="text-xs text-white/35 hover:text-gold transition-colors"
             >
               Esqueci minha senha
