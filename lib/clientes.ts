@@ -53,7 +53,10 @@ export async function getClientesComStats(): Promise<Cliente[]> {
         totalPago: s.pago,
       };
     })
-    .filter((c) => c.role === "consulta" || c.reservasCount > 0);
+    // Um cliente é quem tem reserva OU está com a conta ativa e não é admin.
+    // (Equipe pendente entra como active=false e fica de fora; admin só aparece
+    //  se tiver reserva vinculada, como o cadastro de teste do Bruno.)
+    .filter((c) => c.reservasCount > 0 || (c.active && c.role !== "admin"));
 }
 
 export type ClienteReserva = {

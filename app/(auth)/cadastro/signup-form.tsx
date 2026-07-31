@@ -88,6 +88,7 @@ export function SignupForm({ tipo }: { tipo?: string }) {
         nome: data.nome,
         email: data.email,
         telefone: data.telefone,
+        tipo: isEquipe ? "equipe" : "cliente",
       });
     } catch {
       // silencioso — o cadastro já foi registrado

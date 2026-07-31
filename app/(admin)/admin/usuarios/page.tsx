@@ -170,15 +170,7 @@ export default async function UsuariosPage() {
 
       <div className="p-5 rounded-xl border border-yellow-500/15 bg-yellow-500/5">
         <p className="text-xs text-yellow-400/80 leading-relaxed">
-          <span className="font-bold text-yellow-400">Como funciona:</span> novos
-          cadastros pelo site entram como “Aguardando aprovação”. Ao aprovar, a
-          pessoa passa a acessar a Área do Cliente. Para tornar alguém{" "}
-          <span className="font-semibold text-yellow-300">administrador</span>,
-          ajuste o campo{" "}
-          <code className="bg-white/5 px-1.5 py-0.5 rounded text-yellow-300">
-            app_metadata.role
-          </code>{" "}
-          no Supabase.
+          <span className="font-bold text-yellow-400">Como funciona:</span> cadastros de clientes já entram liberados — o cliente acessa a Área do Cliente assim que confirma o e-mail, sem precisar de aprovação. Já os pedidos de acesso da <span className="font-semibold text-yellow-300">equipe</span> aparecem acima, na seção Aguardando aprovação, e só liberam o painel depois que você aprova aqui. Para tornar alguém <span className="font-semibold text-yellow-300">administrador</span>, ajuste o campo <code className="bg-white/5 px-1.5 py-0.5 rounded text-yellow-300">app_metadata.role</code> no Supabase.
         </p>
       </div>
     </div>

@@ -6,6 +6,7 @@ const schema = z.object({
   nome: z.string().min(1),
   email: z.string().email(),
   telefone: z.string().min(1),
+  tipo: z.enum(["cliente", "equipe"]).optional(),
 });
 
 type Payload = z.infer<typeof schema>;
@@ -27,7 +28,26 @@ export async function notifyNewSignup(payload: Payload) {
   const parsed = schema.safeParse(payload);
   if (!parsed.success) return { success: false };
 
-  const { nome, email, telefone } = parsed.data;
+  const { nome, email, telefone, tipo } = parsed.data;
+  const isEquipe = tipo === "equipe";
+
+  // O texto muda conforme o tipo de cadastro:
+  // - equipe: precisa de aprovação de um admin;
+  // - cliente: já tem acesso ao confirmar o e-mail (só um aviso informativo).
+  const subject = isEquipe
+    ? `Novo acesso de equipe aguardando aprovação — ${nome}`
+    : `Novo cliente cadastrado — ${nome}`;
+
+  const titulo = isEquipe
+    ? "Novo acesso de equipe aguardando aprovação"
+    : "Novo cliente cadastrado";
+
+  const intro = isEquipe
+    ? "Uma pessoa solicitou acesso à equipe. Revise e libere o acesso ao painel."
+    : "Um novo cliente criou conta. O acesso é liberado assim que ele confirmar o e-mail — nenhuma ação necessária.";
+
+  const ctaHref = isEquipe ? `${SITE}/admin/usuarios` : `${SITE}/admin/clientes`;
+  const ctaLabel = isEquipe ? "Revisar e aprovar" : "Ver clientes";
 
   try {
     const { Resend } = await import("resend");
@@ -36,12 +56,12 @@ export async function notifyNewSignup(payload: Payload) {
     await resend.emails.send({
       from: FROM,
       to: TO,
-      subject: `Novo cadastro pendente — ${nome}`,
+      subject,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #081A3A; color: #fff; padding: 40px; border-radius: 12px;">
           <div style="border-bottom: 1px solid rgba(200,165,77,0.3); padding-bottom: 24px; margin-bottom: 24px;">
-            <h1 style="color: #C8A54D; font-size: 22px; margin: 0;">Novo cadastro aguardando aprovação</h1>
-            <p style="color: rgba(255,255,255,0.5); margin: 8px 0 0;">Blue Panda Experience Platform</p>
+            <h1 style="color: #C8A54D; font-size: 22px; margin: 0;">${titulo}</h1>
+            <p style="color: rgba(255,255,255,0.5); margin: 8px 0 0; font-size: 13px; line-height: 1.5;">${intro}</p>
           </div>
           <table style="width: 100%; border-collapse: collapse;">
             <tr>
@@ -58,8 +78,8 @@ export async function notifyNewSignup(payload: Payload) {
             </tr>
           </table>
           <div style="margin-top: 28px; text-align: center;">
-            <a href="${SITE}/admin/usuarios" style="display: inline-block; background: linear-gradient(135deg, #C8A54D, #DDBB67); color: #081A3A; font-weight: 700; padding: 14px 28px; border-radius: 14px; text-decoration: none; font-size: 14px;">
-              Revisar e aprovar
+            <a href="${ctaHref}" style="display: inline-block; background: linear-gradient(135deg, #C8A54D, #DDBB67); color: #081A3A; font-weight: 700; padding: 14px 28px; border-radius: 14px; text-decoration: none; font-size: 14px;">
+              ${ctaLabel}
             </a>
           </div>
           <div style="margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(200,165,77,0.2); text-align: center;">
