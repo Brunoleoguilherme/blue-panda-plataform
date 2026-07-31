@@ -28,7 +28,7 @@ export async function sendContactEmail(data: ContactData) {
       from: "Blue Panda <contato@bluepandatravel.com.br>",
       to: ["contato@bluepandatravel.com.br"],
       replyTo: email,
-      subject: `Novo contato — ${evento ?? "Geral"} — ${nome}`,
+      subject: `Novo contato — ${evento || "Geral"} — ${nome}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #081A3A; color: #fff; padding: 40px; border-radius: 12px;">
           <div style="border-bottom: 1px solid rgba(200,165,77,0.3); padding-bottom: 24px; margin-bottom: 24px;">

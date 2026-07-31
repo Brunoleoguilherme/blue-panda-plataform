@@ -66,7 +66,7 @@ export function AdminSidebar() {
               alt="Blue Panda"
               width={100}
               height={35}
-              className="h-7 w-auto object-contain"
+              className="h-10 w-auto object-contain"
             />
             <span className="text-[10px] font-bold bg-red-500/20 text-red-400 border border-red-500/30 rounded-badge px-1.5 py-0.5 uppercase tracking-widest">
               Admin
