@@ -7,7 +7,13 @@ export const metadata: Metadata = {
   description: "Cadastre-se na Blue Panda Travel",
 };
 
-export default function CadastroPage() {
+export default async function CadastroPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ tipo?: string }>;
+}) {
+  const { tipo } = await searchParams;
+
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden py-12">
       {/* Background image */}
@@ -31,7 +37,7 @@ export default function CadastroPage() {
         </div>
 
         <div className="rounded-2xl border border-white/10 bg-midnight/80 backdrop-blur-xl shadow-2xl px-8 py-10">
-          <SignupForm />
+          <SignupForm tipo={tipo} />
         </div>
 
         <p className="text-center text-xs text-white/20 mt-8 font-serif italic">

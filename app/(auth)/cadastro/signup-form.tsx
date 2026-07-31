@@ -36,7 +36,9 @@ const schema = z
 
 type FormData = z.infer<typeof schema>;
 
-export function SignupForm() {
+export function SignupForm({ tipo }: { tipo?: string }) {
+  const isEquipe = tipo === "equipe";
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
@@ -57,7 +59,11 @@ export function SignupForm() {
       email: data.email,
       password: data.password,
       options: {
-        data: { full_name: data.nome, phone: data.telefone },
+        data: {
+          full_name: data.nome,
+          phone: data.telefone,
+          account_type: isEquipe ? "equipe" : "cliente",
+        },
         emailRedirectTo:
           typeof window !== "undefined"
             ? `${window.location.origin}/login`
@@ -87,7 +93,7 @@ export function SignupForm() {
       // silencioso — o cadastro já foi registrado
     }
 
-    // A conta nasce pendente; encerra qualquer sessão criada no cadastro.
+    // Encerra qualquer sessão criada no cadastro (confirmação de e-mail pendente).
     await supabase.auth.signOut();
 
     setSuccess(true);
@@ -105,11 +111,13 @@ export function SignupForm() {
         <div className="w-14 h-14 rounded-full bg-green-500/15 flex items-center justify-center mx-auto mb-5">
           <CheckCircle2 size={28} className="text-green-400" />
         </div>
-        <h1 className="text-2xl font-bold text-white mb-2">Cadastro recebido!</h1>
+        <h1 className="text-2xl font-bold text-white mb-2">
+          {isEquipe ? "Solicitação enviada!" : "Confirme seu e-mail"}
+        </h1>
         <p className="text-white/50 text-sm leading-relaxed mb-8">
-          Sua conta foi criada e está aguardando a aprovação de um
-          administrador. Assim que for liberada, você poderá acessar a Área do
-          Cliente com o seu e-mail e senha.
+          {isEquipe
+            ? "Sua conta foi criada e está aguardando a aprovação de um administrador. Você também receberá um e-mail para confirmar seu endereço."
+            : "Enviamos um link de confirmação para o seu e-mail. Confirme para liberar o acesso à sua Área do Cliente."}
         </p>
         <Link href="/login">
           <Button variant="secondary" size="lg" className="w-full">
@@ -128,12 +136,15 @@ export function SignupForm() {
     >
       <div className="mb-8">
         <p className="text-xs font-semibold text-gold uppercase tracking-widest mb-2">
-          Área do Cliente
+          {isEquipe ? "Área da Equipe" : "Área do Cliente"}
         </p>
-        <h1 className="text-3xl font-bold text-white mb-2">Criar sua conta</h1>
+        <h1 className="text-3xl font-bold text-white mb-2">
+          {isEquipe ? "Solicitar acesso" : "Criar sua conta"}
+        </h1>
         <p className="text-white/40 text-sm">
-          Cadastre-se para acompanhar suas experiências. Seu acesso é liberado
-          após aprovação da nossa equipe.
+          {isEquipe
+            ? "Preencha para solicitar acesso à equipe. Um administrador libera o seu acesso após a análise."
+            : "Cadastre-se para acompanhar suas experiências. Basta confirmar seu e-mail para acessar."}
         </p>
       </div>
 
@@ -240,7 +251,7 @@ export function SignupForm() {
           loading={loading}
           className="w-full"
         >
-          {loading ? "Enviando..." : "Criar conta"}
+          {loading ? "Enviando..." : isEquipe ? "Solicitar acesso" : "Criar conta"}
         </Button>
       </form>
 

@@ -206,15 +206,27 @@ export function LoginForm({ variant = "cliente" }: { variant?: LoginVariant }) {
           {loading ? "Entrando..." : isAdmin ? "Entrar no painel" : "Entrar"}
         </Button>
 
-        <p className="text-center text-sm text-white/35 mt-4">
-          Não tem conta?{" "}
-          <Link
-            href="/cadastro"
-            className="text-gold hover:text-gold-light transition-colors font-semibold"
-          >
-            Cadastre-se
-          </Link>
-        </p>
+        {isAdmin ? (
+          <p className="text-center text-sm text-white/35 mt-4">
+            É da equipe e não tem acesso?{" "}
+            <Link
+              href="/cadastro?tipo=equipe"
+              className="text-gold hover:text-gold-light transition-colors font-semibold"
+            >
+              Solicitar acesso
+            </Link>
+          </p>
+        ) : (
+          <p className="text-center text-sm text-white/35 mt-4">
+            Não tem conta?{" "}
+            <Link
+              href="/cadastro"
+              className="text-gold hover:text-gold-light transition-colors font-semibold"
+            >
+              Cadastre-se
+            </Link>
+          </p>
+        )}
       </div>
     </form>
   );
